@@ -1,25 +1,27 @@
-@import 'styles/utils/_variables';
-@import 'styles/utils/_breakpoints';
+@import "styles/utils/_variables";
+@import "styles/utils/_breakpoints";
 
 .imagesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    justify-content: space-around;
-    z-index: -1;
-    margin-top: $spacing-larger;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-around;
+  z-index: -1;
+  margin-top: $spacing-larger;
+  row-gap: 20px;
 }
 
 .imageContainer {
-    cursor: pointer;
-    margin: $spacing-small;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-left: 4px solid $color-white;
-    border-top: 4px solid $color-white;
-    border-right: 4px solid $color-white;
-  
-    &:hover {
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      transition: all 0.3s ease-in-out;
-    }
+  cursor: pointer;
+  margin: $spacing-small;
+  height: 200px;
+  // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  // border-left: 4px solid $color-white;
+  // border-top: 4px solid $color-white;
+  // border-right: 4px solid $color-white;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.3s ease-in-out;
+  }
 }

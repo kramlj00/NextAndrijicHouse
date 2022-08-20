@@ -12,7 +12,11 @@ const HomeCard = () => {
 
   return (
     <div>
-      <section className={styles.cardContainer}>
+      <section
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        className={styles.cardContainer}
+      >
         <div className={styles.leftSide}>
           <h1>{t.welcomeTitle}</h1>
           <p className={styles.description}>{t.houseInfo}</p>
@@ -21,7 +25,11 @@ const HomeCard = () => {
           <TransitionedCardFan />
         </div>
       </section>
-      <section className={styles.locationContainer}>
+      <section
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        className={styles.locationContainer}
+      >
         <h1>{t.locationTitle}</h1>
         <iframe
           className={styles.map}
