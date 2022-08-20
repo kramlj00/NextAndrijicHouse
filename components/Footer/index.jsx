@@ -28,13 +28,13 @@ const Footer = () => {
       </section>
       <section className={styles.footerItemsContainer}>
         <div className={styles.itemContainer}>
-          <Link href={"/contact_us"}>
+          <Link href={"/contact"}>
             <div className={styles.footerItemTitle}>{t.contactUs}</div>
           </Link>
           <div className={styles.footerItemSubtitle}>
-            andrijichouse@gmail.com
+            tonci.andrijic@gmail.com
           </div>
-          <div className={styles.footerItemSubtitle}>+385 098 181 6135</div>
+          <div className={styles.footerItemSubtitle}>+385 98 181 6135</div>
           <div className={styles.footerItemSubtitle}>
             Zaglav 20271, Blato Croatia
           </div>

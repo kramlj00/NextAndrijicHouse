@@ -7,7 +7,7 @@ export default {
   exteriorSayingPartTwo: "by the sea",
   welcomeTitle: "Welcome!",
   houseInfo:
-    "Vacation House for 4 persons in place Zaglav/Karbuni Blato. House has fully equipped kitchen, living room, bathroom, two bedrooms and big covered terrace. Guests can use private barbecue, canoe and rent a boat. House is in the first row near sea and has private beach with beach umbrella, deck chairs and outdoor shower. Gravel public beach is 150 m from house. Private parking for 3 cars and free WiFi are available for our guests.",
+    "Vacation House for 4 persons in place Zaglav/Karbuni, Blato. The house has a fully equipped kitchen, living room, bathroom, two bedrooms and a large covered terrace. Guests can use a private barbecue, canoe and rent a boat nearby. The house is located in the first row to the sea and has a private beach with parasol, sunbeds and an outdoor shower. The pebbly public beach is 150m from the house. Private parking for 3 cars and free WiFi are at guests' disposal.",
   rooms: "Rooms",
   exterior: "Exterior",
   contact: "Contact us",

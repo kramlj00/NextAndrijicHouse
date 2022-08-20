@@ -10,9 +10,10 @@
   position: relative;
   overflow: hidden;
   width: 90%;
-  margin-top: 100px;
-  margin-bottom: 200px;
+  margin-top: 110px;
+  margin-bottom: 400px;
   background-color: $color-white;
+  max-width: 1300px;
 
   @media screen and (max-width: $tablet) {
     padding: 20px 40px;

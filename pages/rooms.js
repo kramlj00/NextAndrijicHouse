@@ -32,7 +32,7 @@ export default function Rooms() {
   ];
 
   return (
-    <Layout activeTab="Rooms">
+    <Layout activeTab={t.rooms}>
       <Head>
         <title>{t.rooms}</title>
       </Head>

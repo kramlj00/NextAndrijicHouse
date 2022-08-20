@@ -44,7 +44,7 @@ export default function Rooms() {
   ];
 
   return (
-    <Layout activeTab="Exterior">
+    <Layout activeTab={t.exterior}>
       <Head>
         <title>{t.exterior}</title>
       </Head>

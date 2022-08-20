@@ -12,9 +12,9 @@ const Sidebar = ({ activeTab }) => {
   const t = locale === "en" ? en : hr;
 
   const MENU_LIST = [
-    { text: "Rooms", href: "/rooms" },
-    { text: "Exterior", href: "/exterior" },
-    { text: "Contact us", href: "/contact" },
+    { text: `${t.rooms}`, href: "/rooms" },
+    { text: `${t.exterior}`, href: "/exterior" },
+    { text: `${t.contact}`, href: "/contact" },
   ];
 
   return (

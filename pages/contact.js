@@ -11,7 +11,7 @@ export default function Contact() {
   const t = locale === "en" ? en : hr;
 
   return (
-    <Layout activeTab="Contact us">
+    <Layout activeTab={t.contact}>
       <Head>
         <title>{t.contact}</title>
       </Head>
