@@ -17,7 +17,7 @@ export default function Layout({ children, activeTab }) {
           activeTab={activeTab}
         />
       </header>
-      <main>{children}</main>
+      <main className={styles.mainContent}>{children}</main>
       <footer>
         <Footer />
       </footer>
