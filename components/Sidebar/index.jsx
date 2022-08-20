@@ -6,7 +6,7 @@ import LanguageOptions from "../LanguageOptions";
 import NavItem from "../NavItem/NavItem";
 import styles from "./sidebar.module.scss";
 
-const Sidebar = ({ activeTab }) => {
+const Sidebar = ({ activeTab, isOpen }) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === "en" ? en : hr;
@@ -18,7 +18,7 @@ const Sidebar = ({ activeTab }) => {
   ];
 
   return (
-    <div className={styles.sidebarContainer}>
+    <div className={`${styles.sidebarContainer} ${isOpen ? styles.openSidebar : styles.closeSidebar}`}>
       <div className={styles.menuList}>
         {MENU_LIST.map((menu) => (
           <NavItem key={menu.text} activeTab={activeTab} {...menu} />

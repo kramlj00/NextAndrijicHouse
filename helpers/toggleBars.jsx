@@ -9,7 +9,7 @@ const ToggleBars = ({ activeTab, isOpen, setIsOpen }) => {
 
   return (
     <div>
-      {isOpen && <Sidebar activeTab={activeTab} toggle={toggle} />}
+      <Sidebar activeTab={activeTab} isOpen={isOpen}/>
       <Navbar activeTab={activeTab} toggle={toggle} isOpen={isOpen} />
     </div>
   );
