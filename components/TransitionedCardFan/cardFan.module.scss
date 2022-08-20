@@ -16,7 +16,6 @@
     .pic1 {
       transform: rotate(-20deg);
     }
-  
     .pic3 {
       transform: rotate(20deg);
     }
@@ -82,7 +81,7 @@
 @media screen and (max-width: 1700px) {
   .cardfan {
     height: 200px;
-    margin-bottom: -350px; 
+    margin-bottom: -350px;
     margin-top: 50px;
   }
 }
@@ -136,5 +135,11 @@
       border: 6px solid #ffe;
       border-bottom: 2px solid #ffe;
     }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .svgImage {
+    width: 250px;
   }
 }

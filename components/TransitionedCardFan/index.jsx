@@ -30,12 +30,12 @@ const TransitionedCardFan = () => {
           />
         </div>
       </div>
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <svg className={styles.svgImage} version="1.1" xmlns="http://www.w3.org/2000/svg">
         <filter id="blur">
           <feGaussianBlur stdDeviation="3" />
         </filter>
       </svg>
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <svg className={styles.svgImage} version="1.1" xmlns="http://www.w3.org/2000/svg">
         <filter id="greyscale">
           <feColorMatrix
             type="matrix"
@@ -46,7 +46,7 @@ const TransitionedCardFan = () => {
           />
         </filter>
       </svg>
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <svg className={styles.svgImage} version="1.1" xmlns="http://www.w3.org/2000/svg">
         <filter id="sepia">
           <feColorMatrix
             values="0.14 0.45 0.05 0 0

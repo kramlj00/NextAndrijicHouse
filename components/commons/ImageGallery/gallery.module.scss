@@ -14,8 +14,9 @@
     cursor: pointer;
     margin: $spacing-small;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    height: 200px;
-    width: 350px;
+    border-left: 4px solid $color-white;
+    border-top: 4px solid $color-white;
+    border-right: 4px solid $color-white;
   
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

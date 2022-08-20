@@ -1,117 +1,121 @@
-@import 'styles/utils/_variables';
-@import 'styles/utils/_breakpoints';
+@import "styles/utils/_variables";
+@import "styles/utils/_breakpoints";
 
 .footerContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 320px;
-    margin-top: 35px;
-    background-color: $color-gray-40;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 320px;
+  margin-top: 35px;
+  background-color: $color-gray-40;
 
-    @media screen and (max-width: $mobile) {
-        height: 350px;
-    }
+  @media screen and (max-width: $mobile) {
+    height: 350px;
+  }
 }
 
 .footerLogo {
-    color: $color-white;
-    font-weight: normal;
-    cursor: pointer;
-    padding: 0 20px;
-    font-size: $font-size-extra-large;
-    
-    @media screen and (max-width: $tablet) {
-        padding: 0 12px;
-        font-size: $font-size-large;
-    }
+  color: $color-white;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 0 20px;
+  font-size: $font-size-extra-large;
+
+  @media screen and (max-width: $tablet) {
+    padding: 0 12px;
+    font-size: $font-size-large;
+  }
 }
 
 .separatorBar {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    @media screen and (max-width: $mobile) {
-       margin-bottom: 20px;
-    }
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 20px;
+  }
 }
 
 .horizontalLine {
-    height: 1px;
-    width: 200px;
-    background-color: whitesmoke;
+  height: 1px;
+  width: 200px;
+  background-color: whitesmoke;
 
-    @media screen and (max-width: $tablet) {
-        width: 110px;
-     }
-     @media screen and (max-width: $mobile) {
-        width: 70px;
-     }
+  @media screen and (max-width: $tablet) {
+    width: 110px;
+  }
+  @media screen and (max-width: $mobile) {
+    width: 70px;
+  }
 }
 
 .footerItemsContainer {
-    display: flex;
-    width: 70%;
-    margin: 0 auto;
-    justify-content: space-between;
-    font-family: $font-family-main;
-    color: $color-white;
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-family: $font-family-main;
+  color: $color-white;
 
-    @media screen and (max-width: $tablet) {
-        width: 90%;
-     }
-     @media screen and (max-width: $mobile) {
-        flex: 1;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-     }
+  @media screen and (max-width: $tablet) {
+    width: 90%;
+  }
+  @media screen and (max-width: $mobile) {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .itemContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
 .footerItemTitle {
-    cursor: pointer;
-    color: $color-white;
-    font-size: $font-size-medium-large;
+  cursor: pointer;
+  color: $color-white;
+  font-size: $font-size-medium-large;
 
-    @media screen and (max-width: $tablet) {
-        font-size: $font-size-medium-larger;
-     }
-     @media screen and (max-width: $mobile) {
-        font-size: $font-size-medium;
-        text-align: center;
-     }
+  @media screen and (max-width: $tablet) {
+    font-size: $font-size-medium-larger;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-medium;
+    text-align: center;
+  }
 }
 
 .footerItemSubtitle {
-    font-weight: 700;
-    padding-top: 16px;
-    color: $color-gray-10;
-    font-size: $font-size-medium;
+  font-weight: 700;
+  padding-top: 16px;
+  color: $color-gray-10;
+  font-size: $font-size-medium;
 
-    @media screen and (max-width: $mobile) {
-        font-size: $font-size-medium-small;
-        padding-top: 10px;
-        text-align: center;
-     }
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-medium-small;
+    padding-top: 10px;
+    text-align: center;
+  }
 }
 
 .rightsContainer {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px;
-    color: $color-gray-30;
-    font-family: $font-family-main;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  color: $color-gray-30;
+  font-family: $font-family-main;
 
-    @media screen and (max-width: $mobile) {
-        font-size: $font-size-medium-small;
-        padding-top: 20px;
-     }
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-medium-small;
+    padding-top: 20px;
+  }
+
+  @media screen and (max-width: $small) {
+    font-size: 0.7rem;
+  }
 }
