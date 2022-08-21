@@ -8,12 +8,16 @@ import hr from "../locales/hr";
 
 export default function Home() {
   const router = useRouter();
-  const {locale} = router;
-  const t = locale === 'en' ? en : hr;
-  
+  const { locale } = router;
+  const t = locale === "en" ? en : hr;
+
   return (
     <Layout>
       <Head>
+        <meta
+          name="google-site-verification"
+          content="TWpe2aeZnD_aC8cZiU0xXXfD_CAnbcjHPX7ajgdq-Lw"
+        />
         <title>{siteTitle}</title>
       </Head>
       <MainImage
