@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./mainImage.module.scss";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import en from "../../../locales/en";
 import hr from "../../../locales/hr";
@@ -15,32 +15,12 @@ export default function MainImage({
   const { locale } = router;
   const t = locale === "en" ? en : hr;
 
-  const [isScrolling, setIsScrolling] = useState(false);
-
-  useEffect(() => {
-    changeOpacity();
-    return () => {
-      setIsScrolling(false); //clean the state in the unmount of the component
-    };
-  }, []);
-
-  const changeOpacity = () => {
-    if (window.scrollY >= 450) {
-      setIsScrolling(true);
-    } else {
-      setIsScrolling(false);
-    }
-  };
-
-  if (typeof window !== "undefined")
-    window.addEventListener("scroll", changeOpacity);
-
   return (
     <div className={`${styles.imageContainer}`}>
       <Image
         priority
         src={src}
-        placeholder={isScrolling && "blur"}
+        placeholder="blur"
         blurDataURL={src}
         layout="fill"
         objectFit="cover"
