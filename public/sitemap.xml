@@ -5,19 +5,4 @@
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
     </url>
-    <url>
-        <loc>https://andrijic-house.netlify.app/rooms</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://andrijic-house.netlify.app/exterior</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://andrijic-house.netlify.app/contact</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.7</priority>
-    </url>
 </urlset>
