@@ -34,6 +34,7 @@
 
   @media screen and (max-width: $large) {
     display: flex;
+    z-index: 1;
     align-items: center;
     justify-content: center;
     font-size: $font-size-large;
