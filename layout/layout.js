@@ -9,7 +9,7 @@ export default function Layout({ children, activeTab }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`${isOpen && styles.pageContainer}`}>
+    <div className={`${isOpen ? styles.pageContainer : ""}`}>
       <header>
         <ToggleBars
           isOpen={isOpen}

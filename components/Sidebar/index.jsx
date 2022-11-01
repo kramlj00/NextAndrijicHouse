@@ -18,7 +18,11 @@ const Sidebar = ({ activeTab, isOpen }) => {
   ];
 
   return (
-    <div className={`${styles.sidebarContainer} ${isOpen ? styles.openSidebar : styles.closeSidebar}`}>
+    <div
+      className={`${styles.sidebarContainer} ${
+        isOpen ? styles.openSidebar : styles.closeSidebar
+      }`}
+    >
       <div className={styles.menuList}>
         {MENU_LIST.map((menu) => (
           <NavItem key={menu.text} activeTab={activeTab} {...menu} />
@@ -30,8 +34,8 @@ const Sidebar = ({ activeTab, isOpen }) => {
         >
           <button className="bookNowBtn">{t.bookNow}</button>
         </a>
+        <LanguageOptions />
       </div>
-      <LanguageOptions />
     </div>
   );
 };

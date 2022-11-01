@@ -1,56 +1,55 @@
-@import 'styles/utils/_variables';
-@import 'styles/utils/_breakpoints';
+@import "styles/utils/_variables";
+@import "styles/utils/_breakpoints";
 
-  .navHeader {
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    background-color: $color-gray-10;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 0 $spacing-large;
+.navHeader {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: $color-gray-10;
+  // position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 0 $spacing-large;
 
-
-    @media screen and (max-width: $small) {
-      padding: 0 $spacing-medium;
-    }
+  @media screen and (max-width: $small) {
+    padding: 0 $spacing-medium;
   }
+}
 
-  .menuList {
-    display: flex;
-    flex-grow: 0.25;
-    justify-content: space-between;
-    align-items: center;
+.menuList {
+  display: flex;
+  flex-grow: 0.25;
+  justify-content: space-between;
+  align-items: center;
 
-    @media screen and (max-width: $large) {
-      display: none;
-    }
-  }
-
-  .hamburgerBar {
+  @media screen and (max-width: $large) {
     display: none;
-
-    @media screen and (max-width: $large) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: $font-size-large;
-      color: $color-gray-40;
-      cursor: pointer;
-      transition: all 0.7s ease-out;
-    }
   }
+}
 
-  .openHamburgerBar {
-    transform: rotate(90deg);
+.hamburgerBar {
+  display: none;
+
+  @media screen and (max-width: $large) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-large;
+    color: $color-gray-40;
+    cursor: pointer;
     transition: all 0.7s ease-out;
   }
-  
-  .languageOptionsContainer {
-    @media screen and (max-width: $large) {
-      display: none;
-    }
+}
+
+.openHamburgerBar {
+  transform: rotate(90deg);
+  transition: all 0.7s ease-out;
+}
+
+.languageOptionsContainer {
+  @media screen and (max-width: $large) {
+    display: none;
   }
+}
