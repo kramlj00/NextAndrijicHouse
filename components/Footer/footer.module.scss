@@ -5,12 +5,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 320px;
-  margin-top: 35px;
+  height: 350px;
+  margin-top: 100px;
   background-color: $color-gray-40;
 
   @media screen and (max-width: $mobile) {
-    height: 350px;
+    height: 380px;
   }
 }
 
@@ -105,17 +105,28 @@
 
 .rightsContainer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 25px;
   justify-content: center;
-  padding-bottom: 10px;
   color: $color-gray-30;
   font-family: $font-family-main;
+  margin-bottom: 10px;
+  text-align: center;
 
   @media screen and (max-width: $mobile) {
     font-size: $font-size-medium-small;
     padding-top: 20px;
   }
+}
 
-  @media screen and (max-width: $small) {
-    font-size: 0.7rem;
+.createdBy {
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-medium-small;
   }
+}
+
+.createdByName {
+  font-weight: 700;
+  color: #95989c;
 }

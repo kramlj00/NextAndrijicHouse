@@ -56,6 +56,11 @@ const Footer = () => {
       </section>
       <div className={styles.rightsContainer}>
         Andrijić House &copy; {new Date().getFullYear()} {t.rightsInfo}
+        <span className={styles.createdBy}>
+          Created by{" "}
+          <span className={styles.createdByName}>Kristina Ramljak</span>{" "}
+          (kristinaramljak5@gmail.com)
+        </span>
       </div>
     </footer>
   );

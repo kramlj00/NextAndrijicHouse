@@ -69,3 +69,21 @@ textarea {
     transition: all 0.4s ease-out;
   }
 }
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 100vh;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #81c6e4;
+  border-radius: 100vh;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #47a2d6;
+}

@@ -28,7 +28,8 @@ const HomeCard = () => {
               rel="noreferrer"
             >
               {t.here}
-            </a>.
+            </a>
+            .
           </p>
         </div>
         <div className={styles.rightSide}>
