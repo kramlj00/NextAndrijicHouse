@@ -4,7 +4,6 @@ import NavItem from "../NavItem/NavItem";
 import Logo from "../commons/Logo";
 import styles from "./navBar.module.scss";
 import LanguageOptions from "../LanguageOptions";
-import { FaBars } from "react-icons/fa";
 import { useRouter } from "next/router";
 import en from "../../locales/en";
 import hr from "../../locales/hr";
@@ -33,7 +32,28 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
         }`}
         onClick={toggle}
       >
-        <FaBars />
+        <div
+          className={`${styles.menuIconLine} ${
+            isOpen ? styles.menuIconLineFirstX : styles.menuIconLineFirstXClose
+          }`}
+        ></div>
+        <div
+          className={`${styles.menuIconLine} ${
+            isOpen ? styles.menuIconLineSecondHidden : styles.menuIconLineSecond
+          }`}
+        ></div>
+        <div
+          className={`${styles.menuIconLine} ${
+            isOpen ? styles.menuIconLineThirdHidden : styles.menuIconLineThird
+          }`}
+        ></div>
+        <div
+          className={`${styles.menuIconLine} ${
+            isOpen
+              ? styles.menuIconLineSecondX
+              : styles.menuIconLineSecondXClose
+          }`}
+        ></div>
       </div>
       <div className={styles.menuList}>
         {MENU_LIST.map((menu) => (
