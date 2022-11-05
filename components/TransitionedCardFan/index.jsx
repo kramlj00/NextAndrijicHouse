@@ -1,10 +1,27 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import styles from "./cardFan.module.scss";
 
 const TransitionedCardFan = () => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+  const [isSpread, setIsSpread] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsSpread(false);
+    }, [5000]);
+  }, []);
+
   return (
     <div>
-      <div className={styles.cardfan}>
+      <div
+        className={inView && isSpread ? styles.spreadCardfan : styles.cardfan}
+        ref={ref}
+      >
         <div className={`${styles.cardfanImage} ${styles.pic3}`}>
           <Image
             src="https://res.cloudinary.com/kristina1950/image/upload/v1659702042/rooms/room17-image_ir36t2.jpg"
@@ -30,12 +47,20 @@ const TransitionedCardFan = () => {
           />
         </div>
       </div>
-      <svg className={styles.svgImage} version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className={styles.svgImage}
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <filter id="blur">
           <feGaussianBlur stdDeviation="3" />
         </filter>
       </svg>
-      <svg className={styles.svgImage} version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className={styles.svgImage}
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <filter id="greyscale">
           <feColorMatrix
             type="matrix"
@@ -46,7 +71,11 @@ const TransitionedCardFan = () => {
           />
         </filter>
       </svg>
-      <svg className={styles.svgImage} version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className={styles.svgImage}
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <filter id="sepia">
           <feColorMatrix
             values="0.14 0.45 0.05 0 0

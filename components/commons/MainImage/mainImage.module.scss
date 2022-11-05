@@ -16,6 +16,14 @@
 .imageContainer {
   height: 89vh;
   position: relative;
+
+  @media screen and (max-width: $desktop) {
+    height: 87vh;
+  }
+  @media screen and (max-width: $large) {
+    height: 85vh;
+  }
+
   > .sayingWrapper {
     visibility: visible;
     width: fit-content;
@@ -32,7 +40,7 @@
 
     @media screen and (max-width: $desktop) {
       left: 50%;
-      top: 55%;
+      top: 50%;
     }
   }
 
@@ -51,8 +59,8 @@
       width: 400px;
     }
     @media screen and (max-width: $mobile) {
-      font-size: $font-size-large;
-      width: 260px;
+      font-size: $font-size-extra-large;
+      width: "100%";
     }
   }
 }

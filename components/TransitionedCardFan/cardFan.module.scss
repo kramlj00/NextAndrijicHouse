@@ -1,3 +1,32 @@
+.spreadCardfan {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 30px;
+
+  .pic1 {
+    transform: rotate(-20deg);
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+    filter: alpha(opacity = 100);
+    filter: none;
+  }
+  .pic3 {
+    transform: rotate(20deg);
+  }
+  .cardfanImage {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    border: 12px solid #ffe;
+    border-bottom: 8px solid #ffe;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
+    transform-origin: center 460px;
+    transition: all 1s linear;
+    float: right;
+  }
+}
+
 .cardfan {
   width: 50%;
   margin: 0 auto;
@@ -84,16 +113,29 @@
     margin-bottom: -350px;
     margin-top: 50px;
   }
+  .spreadCardfan {
+    height: 200px;
+    margin-bottom: -350px;
+    margin-top: 50px;
+  }
 }
 
 @media screen and (max-width: 1600px) {
   .cardfan {
     margin-top: 60px;
   }
+  .spreadCardfan {
+    margin-top: 60px;
+  }
 }
 
 @media screen and (max-width: 1300px) {
   .cardfan {
+    width: 70%;
+    margin-top: 30px;
+    height: 380px;
+  }
+  .spreadCardfan {
     width: 70%;
     margin-top: 30px;
     height: 380px;
@@ -106,10 +148,20 @@
     margin-top: 20px;
     height: 230px;
   }
+  .spreadCardfan {
+    width: 80%;
+    margin-top: 20px;
+    height: 230px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
   .cardfan {
+    width: 90%;
+    margin-top: 20px;
+    height: 200px;
+  }
+  .spreadCardfan {
     width: 90%;
     margin-top: 20px;
     height: 200px;
@@ -122,10 +174,26 @@
     margin-top: 0px;
     width: 85%;
   }
+  .spreadCardfan {
+    height: 120px;
+    margin-top: 0px;
+    width: 85%;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .cardfan {
+    height: 40px;
+    margin-top: 0px;
+    width: 70%;
+
+    .cardfanImage {
+      transform-origin: center 250px;
+      border: 6px solid #ffe;
+      border-bottom: 2px solid #ffe;
+    }
+  }
+  .spreadCardfan {
     height: 40px;
     margin-top: 0px;
     width: 70%;
