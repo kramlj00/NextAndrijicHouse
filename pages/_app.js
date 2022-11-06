@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
-    AOS.init({once: true});
+    AOS.init({ once: true });
   }, []);
 
   return <Component {...pageProps} />;

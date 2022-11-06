@@ -18,7 +18,7 @@ export default function Layout({ children, activeTab }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <title>{activeTab}</title>
+        {/* <title>{activeTab}</title> */}
       </Head>
       <main className={`${isOpen ? styles.pageContainer : ""}`}>
         <header>
