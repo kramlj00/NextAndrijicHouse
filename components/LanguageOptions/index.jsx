@@ -1,5 +1,5 @@
 import styles from "./language.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useRouter } from "next/router";
 
 export default function LanguageOptions() {

@@ -20,15 +20,13 @@ const Footer = () => {
       <section className={styles.separatorBar}>
         <div className={styles.horizontalLine} />
         <Link href={"/"}>
-          <a>
-            <h1 className={styles.footerLogo}>Andrijić House</h1>
-          </a>
+          <h1 className={styles.footerLogo}>Andrijić House</h1>
         </Link>
         <div className={styles.horizontalLine} />
       </section>
       <section className={styles.footerItemsContainer}>
         <div className={styles.itemContainer}>
-          <Link href={"/contact"}>
+          <Link href={"/contact"} legacyBehavior>
             <div className={styles.footerItemTitle}>{t.contactUs}</div>
           </Link>
           <div className={styles.footerItemSubtitle}>
@@ -41,7 +39,7 @@ const Footer = () => {
         </div>
         {footerItems.map((footerItem) => (
           <div className={styles.itemContainer} key={footerItem.path}>
-            <Link href={footerItem.path}>
+            <Link href={footerItem.path} legacyBehavior>
               <div className={styles.footerItemTitle}>{footerItem.label}</div>
             </Link>
           </div>

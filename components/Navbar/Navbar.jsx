@@ -22,9 +22,7 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
   return (
     <header className={styles.navHeader}>
       <Link href={"/"}>
-        <a>
-          <Logo />
-        </a>
+        <Logo />
       </Link>
       <div
         className={`${styles.hamburgerBar} ${
