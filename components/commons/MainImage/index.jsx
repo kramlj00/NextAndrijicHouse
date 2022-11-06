@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./mainImage.module.scss";
 import React from "react";
 import { useRouter } from "next/router";
