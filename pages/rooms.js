@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Layout from "../layout/layout";
 import MainImage from "../components/commons/MainImage";
 import ImageGallery from "../components/commons/ImageGallery";
@@ -33,9 +32,6 @@ export default function Rooms() {
 
   return (
     <Layout activeTab={t.rooms}>
-      <Head>
-        <title>{t.rooms}</title>
-      </Head>
       <MainImage
         src="/images/room-image.webp"
         name="room.jpg"

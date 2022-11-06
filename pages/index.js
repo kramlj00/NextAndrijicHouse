@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
 import MainImage from "../components/commons/MainImage";
 import HomeCard from "../components/HomeCard";
@@ -12,14 +11,7 @@ export default function Home() {
   const t = locale === "en" ? en : hr;
 
   return (
-    <Layout>
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="TWpe2aeZnD_aC8cZiU0xXXfD_CAnbcjHPX7ajgdq-Lw"
-        />
-        <title>{siteTitle}</title>
-      </Head>
+    <Layout activeTab={siteTitle}>
       <MainImage
         src="/images/home-image.webp"
         name="home.jpg"

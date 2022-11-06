@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
 import ContactForm from "../components/ContactForm";
 import Layout from "../layout/layout";
@@ -12,10 +11,7 @@ export default function Contact() {
 
   return (
     <Layout activeTab={t.contact}>
-      <Head>
-        <title>{t.contact}</title>
-      </Head>
-      <ContactForm/>
+      <ContactForm />
     </Layout>
   );
 }
