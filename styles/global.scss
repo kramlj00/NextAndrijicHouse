@@ -80,10 +80,11 @@ textarea {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #81c6e4;
+  background: #d1cfcf;
   border-radius: 100vh;
+  border: 1px solid white;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #47a2d6;
+  background: #b3b3b3;
 }

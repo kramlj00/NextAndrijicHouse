@@ -17,6 +17,10 @@ export default function Layout({ children, activeTab }) {
           content="TWpe2aeZnD_aC8cZiU0xXXfD_CAnbcjHPX7ajgdq-Lw"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://andrijichouse.com/hr" />
+        <link rel="canonical" href="https://andrijichouse.com/hr/rooms" />
+        <link rel="canonical" href="https://andrijichouse.com/hr/exterior" />
+        <link rel="canonical" href="https://andrijichouse.com/hr/contact" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${isOpen ? styles.pageContainer : ""}`}>
