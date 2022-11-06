@@ -1,13 +1,16 @@
-import Head from "next/head";
+import { useRouter } from "next/router";
+import { NextSeo } from 'next-seo';
+import useSiteConfig from "../shared/hooks/useSiteConfig";
 import Layout from "../layout/layout";
 import MainImage from "../components/commons/MainImage";
 import ImageGallery from "../components/commons/ImageGallery";
 import en from "../locales/en";
 import hr from "../locales/hr";
-import { useRouter } from "next/router";
 
 export default function Rooms() {
+  const config = useSiteConfig();
   const router = useRouter();
+
   const { locale } = router;
   const t = locale === "en" ? en : hr;
 
@@ -33,9 +36,14 @@ export default function Rooms() {
 
   return (
     <Layout activeTab={t.rooms}>
-      <Head>
-        <title>{t.rooms}</title>
-      </Head>
+      <NextSeo
+        title={`${config.title} | ${t.rooms}`}
+        openGraph={{
+          title: `${config.title} | ${t.rooms}`,
+          url: `${config.url}rooms`,
+          description: config.description
+        }}
+      />
       <MainImage
         src="/images/room-image.webp"
         name="room.jpg"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./gallery.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import FsLightbox from "fslightbox-react";
 
 const ImageGallery = ({ imageList }) => {
