@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-// import { NextSeo } from 'next-seo';
+import { NextSeo } from 'next-seo';
+import useSiteConfig from "../shared/hooks/useSiteConfig";
 import MainImage from "../components/commons/MainImage";
 import HomeCard from "../components/HomeCard";
-import Layout, { siteTitle } from "../layout/layout";
+import Layout from "../layout/layout";
 import en from "../locales/en";
 import hr from "../locales/hr";
-import useSiteConfig from "../shared/hooks/useSiteConfig";
 
 export default function Home() {
   const config = useSiteConfig();
@@ -16,9 +16,13 @@ export default function Home() {
 
   return (
     <Layout>
-      {/* <NextSeo
-        title={`${config.title}`}
-      /> */}
+      <NextSeo
+        openGraph={{
+          title: config.title,
+          url: config.url,
+          description: config.description,
+        }}
+      />
       <MainImage
         src="/images/home-image.webp"
         name="home.jpg"
