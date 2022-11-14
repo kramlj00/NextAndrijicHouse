@@ -20,7 +20,15 @@ export default function App({ Component, pageProps }) {
       openGraph={{
         site_name: siteConfig.title,
         description: siteConfig.description,
-        url: siteConfig.url
+        url: siteConfig.url,
+        images: [
+          {
+            url: siteConfig.ogImage,
+            width: 1200,
+            height: 630,
+            alt: siteConfig.title,
+          },
+        ],
       }}
     />
     <Component {...pageProps} />

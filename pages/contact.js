@@ -20,7 +20,15 @@ export default function Contact() {
         openGraph={{
           title: `${config.title} | ${t.contact}`,
           url: `${config.url}contact`,
-          description: config.description
+          description: config.description,
+          images: [
+            {
+              url: config.ogImage,
+              width: 1200,
+              height: 630,
+              alt: 'Andrijic House',
+            },
+          ],
         }}
       />
       <ContactForm />
