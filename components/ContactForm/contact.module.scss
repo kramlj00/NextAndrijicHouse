@@ -85,10 +85,7 @@
   cursor: pointer;
   margin-top: 15px;
   padding: $spacing-small $spacing-large;
-  background-color: $color-blue-20;
-  color: $color-white;
   font-size: $font-size-medium;
-  border: 1px solid $color-blue-20;
 
   @media screen and (max-width: 870px) {
     padding: $spacing-small $spacing-medium;
@@ -96,9 +93,19 @@
 
   &:hover {
     background-color: $color-blue-10;
-    transform: scale(1.03);
-    transition: all 0.4s ease-out;
+    transition: all 0.35s ease-in-out;
   }
+}
+
+.sendEnabled {
+  background-color: $color-blue-20;
+  color: $color-white;
+  border: 1px solid $color-blue-20;
+}
+
+.sendDisabled {
+  border: 1px solid $color-gray-40;
+  pointer-events: none;
 }
 
 .inputContainer {

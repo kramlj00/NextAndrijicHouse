@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./contact.module.scss";
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -13,14 +13,32 @@ const ContactForm = () => {
   const t = locale === "en" ? en : hr;
 
   const [status, setStatus] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    watch,
   } = useForm();
+  const watchAll = watch(["name", "email", "message"]);
+
+  useEffect(() => {
+    const checkIsFieldEmpty = () => {
+      for (let i in watchAll) {
+        if (!watchAll[i] || watchAll[i].trim() === "") {
+          return true;
+        }
+      }
+      return false;
+    };
+
+    const isFieldEmpty = checkIsFieldEmpty();
+    setIsDisabled(isFieldEmpty);
+  }, [watchAll]);
 
   async function onSubmitForm(values) {
+    setStatus("");
     let config = {
       method: "post",
       url: "/api/contact",
@@ -161,7 +179,12 @@ const ContactForm = () => {
                   {errors?.message?.message}
                 </span>
               </div>
-              <button type="submit" className={styles.sendEmailBtn}>
+              <button
+                type="submit"
+                className={`${styles.sendEmailBtn} ${
+                  isDisabled ? styles.sendDisabled : styles.sendEnabled
+                }`}
+              >
                 {t.send}
               </button>
             </form>
