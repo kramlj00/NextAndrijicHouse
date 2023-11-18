@@ -21,6 +21,9 @@
     "sass": "^1.54.3"
   },
   "devDependencies": {
-    "fslightbox-react": "^1.6.2-2"
+    "@types/node": "20.9.1",
+    "@types/react": "18.2.37",
+    "fslightbox-react": "^1.6.2-2",
+    "typescript": "5.2.2"
   }
 }

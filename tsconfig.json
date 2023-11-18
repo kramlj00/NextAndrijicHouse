@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "typeRoots": ["node_modules/@types"],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@components": ["components/"],
+      "@assets/*": ["public/assets/*"],
+      "@shared/*": ["shared/*"],
+      "@styles/*": ["styles/*"],
+      "@features/*": ["features/*"],
+      "@contracts/*": ["contracts/*"],
+      "@contracts": ["contracts/"],
+      "@api/*": ["api/*"],
+      "@app/*": ["app/*"],
+      "@config": ["config"],
+      "@config/*": ["config/*"],
+      "@context/*": ["context/*"],
+      "@blockchains/*": ["blockchains/*"],
+      "@locales/*": ["locales/*"],
+      "@helpers/*": ["helpers/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/api/baseAxios.ts",
+    "src/features/web3/wallets/connectors/metaMask.ts",
+    "src/middleware.ts",
+    "src/app/dashboard/page.js",
+    "config.ts",
+    "__test__/utils/svg.tsx",
+    "tailwind.cofig.ts"
+  ],
+  "exclude": ["node_modules"]
+}

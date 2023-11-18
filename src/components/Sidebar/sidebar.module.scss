@@ -1,0 +1,34 @@
+@import "@styles/utils/variables";
+@import "@styles/utils/_breakpoints";
+
+.closeSidebar {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 800ms ease-in-out;
+}
+
+.openSidebar {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 800ms ease-in-out;
+}
+
+.sidebarContainer {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-gray-10;
+  font-family: $font-family-main;
+  width: 100%;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 35px;
+  margin: auto;
+}
