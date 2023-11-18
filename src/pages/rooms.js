@@ -2,8 +2,8 @@ import { useRouter } from "next/router";
 import { NextSeo } from 'next-seo';
 import useSiteConfig from "@shared/hooks/useSiteConfig";
 import Layout from "../layout/layout";
-import MainImage from "@components/commons/MainImage";
-import ImageGallery from "@components/commons/ImageGallery";
+import MainImage from "@components/MainImage";
+import ImageGallery from "@components/ImageGallery";
 import en from "@locales/en";
 import hr from "@locales/hr";
 

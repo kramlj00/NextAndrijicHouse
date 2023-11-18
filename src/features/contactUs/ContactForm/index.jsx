@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./contact.module.scss";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import Notification from "@components/commons/Notifications";
+import Notification from "@components/Notifications";
 import { useRouter } from "next/router";
 import en from "@locales/en";
 import hr from "@locales/hr";
