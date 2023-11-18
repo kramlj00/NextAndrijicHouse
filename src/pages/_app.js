@@ -1,4 +1,4 @@
-import "../styles/global.scss";
+import "@styles/global.scss";
 import AOS from "aos";
 import { DefaultSeo } from 'next-seo';
 

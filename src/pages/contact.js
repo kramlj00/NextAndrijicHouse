@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import { NextSeo } from 'next-seo';
-import useSiteConfig from "../shared/hooks/useSiteConfig";
-import ContactForm from "../components/ContactForm";
+import useSiteConfig from "@shared/hooks/useSiteConfig";
+import ContactForm from "@features/contactUs/ContactForm";
 import Layout from "../layout/layout";
-import en from "../locales/en";
-import hr from "../locales/hr";
+import en from "@locales/en";
+import hr from "@locales/hr";
 
 export default function Contact() {
   const config = useSiteConfig();

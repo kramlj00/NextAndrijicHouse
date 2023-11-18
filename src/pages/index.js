@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import { NextSeo } from 'next-seo';
-import useSiteConfig from "../shared/hooks/useSiteConfig";
-import MainImage from "../components/commons/MainImage";
-import HomeCard from "../components/HomeCard";
+import useSiteConfig from "@shared/hooks/useSiteConfig";
+import MainImage from "@components/commons/MainImage";
+import HomeCard from "@features/home/HomeCard";
 import Layout from "../layout/layout";
-import en from "../locales/en";
-import hr from "../locales/hr";
+import en from "@locales/en";
+import hr from "@locales/hr";
 
 export default function Home() {
   const config = useSiteConfig();

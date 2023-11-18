@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import NavItem from "../NavItem/NavItem";
-import Logo from "../commons/Logo";
+import Logo from "../../commons/Logo";
 import styles from "./navBar.module.scss";
-import LanguageOptions from "../LanguageOptions";
+import LanguageOptions from "../../LanguageOptions";
 import { useRouter } from "next/router";
 import en from "@locales/en";
 import hr from "@locales/hr";

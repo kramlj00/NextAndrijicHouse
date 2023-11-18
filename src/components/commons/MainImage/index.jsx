@@ -2,8 +2,8 @@ import Image from "next/legacy/image";
 import styles from "./mainImage.module.scss";
 import React from "react";
 import { useRouter } from "next/router";
-import en from "../../../locales/en";
-import hr from "../../../locales/hr";
+import en from "@locales/en";
+import hr from "@locales/hr";
 
 export default function MainImage({
   src,

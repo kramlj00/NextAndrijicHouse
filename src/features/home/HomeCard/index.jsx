@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import React from "react";
-import en from "../../locales/en";
-import hr from "../../locales/hr";
-import TransitionedCardFan from "../TransitionedCardFan";
+import en from "@locales/en";
+import hr from "@locales/hr";
+import TransitionedCardFan from "@components/TransitionedCardFan";
 import styles from "./homeCard.module.scss";
 
 const HomeCard = () => {
