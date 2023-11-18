@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styles from "./gallery.module.scss";
-import Image from "next/legacy/image";
-import FsLightbox from "fslightbox-react";
+import React, { useState } from 'react';
+import styles from './gallery.module.scss';
+import Image from 'next/legacy/image';
+import FsLightbox from 'fslightbox-react';
 
 const ImageGallery = ({ imageList }) => {
   const [lightboxController, setLightboxController] = useState({

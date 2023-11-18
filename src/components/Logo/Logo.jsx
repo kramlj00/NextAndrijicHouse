@@ -1,5 +1,5 @@
-import styles from "./logo.module.scss";
+import styles from './logo.module.scss';
 
 export default function Logo() {
-    return <h1 className={styles.logo}>Andrijić House</h1>
+  return <h1 className={styles.logo}>Andrijić House</h1>;
 }

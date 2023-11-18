@@ -1,14 +1,14 @@
-import { useRouter } from "next/router";
-import React from "react";
-import en from "@locales/en";
-import hr from "@locales/hr";
-import TransitionedCardFan from "@components/TransitionedCardFan";
-import styles from "./homeCard.module.scss";
+import { useRouter } from 'next/router';
+import React from 'react';
+import en from '@locales/en';
+import hr from '@locales/hr';
+import TransitionedCardFan from '@components/TransitionedCardFan';
+import styles from './homeCard.module.scss';
 
 const HomeCard = () => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
 
   return (
     <div>

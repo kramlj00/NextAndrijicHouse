@@ -1,12 +1,12 @@
-import styles from "./language.module.scss";
-import Image from "next/legacy/image";
-import { useRouter } from "next/router";
+import styles from './language.module.scss';
+import Image from 'next/legacy/image';
+import { useRouter } from 'next/router';
 
 export default function LanguageOptions() {
   const router = useRouter();
   const lngs = {
-    en: { nativeName: "English" },
-    hr: { nativeName: "Hrvatski" },
+    en: { nativeName: 'English' },
+    hr: { nativeName: 'Hrvatski' },
   };
 
   const handleLanguageChange = (lng) => {

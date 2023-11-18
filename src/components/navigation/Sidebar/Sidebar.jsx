@@ -1,20 +1,20 @@
-import { useRouter } from "next/router";
-import React from "react";
-import en from "@locales/en";
-import hr from "@locales/hr";
-import LanguageOptions from "../../LanguageOptions/LanguageOptions";
-import NavItem from "../NavItem";
-import styles from "./sidebar.module.scss";
+import { useRouter } from 'next/router';
+import React from 'react';
+import en from '@locales/en';
+import hr from '@locales/hr';
+import LanguageOptions from '../../LanguageOptions/LanguageOptions';
+import NavItem from '../NavItem';
+import styles from './sidebar.module.scss';
 
 const Sidebar = ({ activeTab, isOpen }) => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
 
   const MENU_LIST = [
-    { text: `${t.rooms}`, href: "/rooms" },
-    { text: `${t.exterior}`, href: "/exterior" },
-    { text: `${t.contact}`, href: "/contact" },
+    { text: `${t.rooms}`, href: '/rooms' },
+    { text: `${t.exterior}`, href: '/exterior' },
+    { text: `${t.contact}`, href: '/contact' },
   ];
 
   return (

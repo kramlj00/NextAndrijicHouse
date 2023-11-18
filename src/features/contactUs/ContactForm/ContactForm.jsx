@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import styles from "./contact.module.scss";
-import { useForm } from "react-hook-form";
-import axios from "axios";
-import Notification from "@components/Notifications";
-import { useRouter } from "next/router";
-import en from "@locales/en";
-import hr from "@locales/hr";
+import React, { useEffect, useState } from 'react';
+import styles from './contact.module.scss';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import Notification from '@components/Notifications';
+import { useRouter } from 'next/router';
+import en from '@locales/en';
+import hr from '@locales/hr';
 
 const ContactForm = () => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
 
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
   const {
     register,
@@ -21,12 +21,12 @@ const ContactForm = () => {
     reset,
     watch,
   } = useForm();
-  const watchAll = watch(["name", "email", "message"]);
+  const watchAll = watch(['name', 'email', 'message']);
 
   useEffect(() => {
     const checkIsFieldEmpty = () => {
       for (let i in watchAll) {
-        if (!watchAll[i] || watchAll[i].trim() === "") {
+        if (!watchAll[i] || watchAll[i].trim() === '') {
           return true;
         }
       }
@@ -38,12 +38,12 @@ const ContactForm = () => {
   }, [watchAll]);
 
   async function onSubmitForm(values) {
-    setStatus("");
+    setStatus('');
     let config = {
-      method: "post",
-      url: "/api/contact",
+      method: 'post',
+      url: '/api/contact',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       data: values,
     };
@@ -51,21 +51,21 @@ const ContactForm = () => {
     try {
       const response = await axios(config);
       if (response.status === 200) {
-        setStatus("success");
+        setStatus('success');
         reset();
       }
     } catch (err) {
       console.log(err);
-      setStatus("error");
+      setStatus('error');
     }
   }
 
   return (
     <div>
-      {status === "success" && (
+      {status === 'success' && (
         <Notification message={t.emailSendSuccess} type="success" />
       )}
-      {status === "error" && (
+      {status === 'error' && (
         <Notification message={t.emailSendError} type="error" />
       )}
       <div className={styles.container}>
@@ -109,7 +109,7 @@ const ContactForm = () => {
                   type="text"
                   name="name"
                   placeholder={t.name}
-                  {...register("name", {
+                  {...register('name', {
                     required: `${t.nameRequired}`,
                     minLength: {
                       value: 3,
@@ -135,7 +135,7 @@ const ContactForm = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  {...register("email", {
+                  {...register('email', {
                     required: `${t.emailRequired}`,
                     minLength: {
                       value: 8,
@@ -163,7 +163,7 @@ const ContactForm = () => {
                   id="description"
                   placeholder={t.message}
                   name="message"
-                  {...register("message", {
+                  {...register('message', {
                     required: `${t.messageRequired}`,
                     minLength: {
                       value: 10,

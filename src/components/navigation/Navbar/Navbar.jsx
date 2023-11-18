@@ -1,27 +1,27 @@
-import Link from "next/link";
-import React from "react";
-import NavItem from "../NavItem";
-import Logo from "@components/Logo";
-import styles from "./navBar.module.scss";
-import LanguageOptions from "@components/LanguageOptions";
-import { useRouter } from "next/router";
-import en from "@locales/en";
-import hr from "@locales/hr";
+import Link from 'next/link';
+import React from 'react';
+import NavItem from '../NavItem';
+import Logo from '@components/Logo';
+import styles from './navBar.module.scss';
+import LanguageOptions from '@components/LanguageOptions';
+import { useRouter } from 'next/router';
+import en from '@locales/en';
+import hr from '@locales/hr';
 
 const Navbar = ({ activeTab, toggle, isOpen }) => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
 
   const MENU_LIST = [
-    { text: `${t.rooms}`, href: "/rooms" },
-    { text: `${t.exterior}`, href: "/exterior" },
-    { text: `${t.contact}`, href: "/contact" },
+    { text: `${t.rooms}`, href: '/rooms' },
+    { text: `${t.exterior}`, href: '/exterior' },
+    { text: `${t.contact}`, href: '/contact' },
   ];
 
   return (
     <header className={styles.navHeader}>
-      <Link href={"/"}>
+      <Link href={'/'}>
         <Logo />
       </Link>
       <div

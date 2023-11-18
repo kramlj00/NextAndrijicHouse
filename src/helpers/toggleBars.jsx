@@ -1,6 +1,6 @@
-import React from "react";
-import Sidebar from "@components/navigation/Sidebar";
-import Navbar from "@components/navigation/Navbar";
+import React from 'react';
+import Sidebar from '@components/navigation/Sidebar';
+import Navbar from '@components/navigation/Navbar';
 
 const ToggleBars = ({ activeTab, isOpen, setIsOpen }) => {
   const toggle = () => {

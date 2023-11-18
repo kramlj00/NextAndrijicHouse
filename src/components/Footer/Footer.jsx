@@ -1,32 +1,32 @@
-import React from "react";
-import styles from "./footer.module.scss";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import en from "@locales/en";
-import hr from "@locales/hr";
+import React from 'react';
+import styles from './footer.module.scss';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import en from '@locales/en';
+import hr from '@locales/hr';
 
 const Footer = () => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
 
   const footerItems = [
-    { label: `${t.rooms}`, path: "/rooms" },
-    { label: `${t.exterior}`, path: "/exterior" },
+    { label: `${t.rooms}`, path: '/rooms' },
+    { label: `${t.exterior}`, path: '/exterior' },
   ];
 
   return (
     <footer className={styles.footerContainer}>
       <section className={styles.separatorBar}>
         <div className={styles.horizontalLine} />
-        <Link href={"/"}>
+        <Link href={'/'}>
           <h1 className={styles.footerLogo}>Andrijić House</h1>
         </Link>
         <div className={styles.horizontalLine} />
       </section>
       <section className={styles.footerItemsContainer}>
         <div className={styles.itemContainer}>
-          <Link href={"/contact"} legacyBehavior>
+          <Link href={'/contact'} legacyBehavior>
             <div className={styles.footerItemTitle}>{t.contactUs}</div>
           </Link>
           <div className={styles.footerItemSubtitle}>
@@ -55,8 +55,8 @@ const Footer = () => {
       <div className={styles.rightsContainer}>
         Andrijić House &copy; {new Date().getFullYear()} {t.rightsInfo}
         <span className={styles.createdBy}>
-          Created by{" "}
-          <span className={styles.createdByName}>Kristina Ramljak</span>{" "}
+          Created by{' '}
+          <span className={styles.createdByName}>Kristina Ramljak</span>{' '}
           (kristinaramljak5@gmail.com)
         </span>
       </div>

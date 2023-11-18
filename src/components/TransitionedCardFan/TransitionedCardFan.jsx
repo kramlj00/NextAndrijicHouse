@@ -1,7 +1,7 @@
-import Image from "next/legacy/image";
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
-import styles from "./cardFan.module.scss";
+import Image from 'next/legacy/image';
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import styles from './cardFan.module.scss';
 
 const TransitionedCardFan = () => {
   const { ref, inView, entry } = useInView({

@@ -1,9 +1,9 @@
-import Image from "next/legacy/image";
-import styles from "./mainImage.module.scss";
-import React from "react";
-import { useRouter } from "next/router";
-import en from "@locales/en";
-import hr from "@locales/hr";
+import Image from 'next/legacy/image';
+import styles from './mainImage.module.scss';
+import React from 'react';
+import { useRouter } from 'next/router';
+import en from '@locales/en';
+import hr from '@locales/hr';
 
 export default function MainImage({
   src,
@@ -13,7 +13,7 @@ export default function MainImage({
 }) {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "en" ? en : hr;
+  const t = locale === 'en' ? en : hr;
 
   return (
     <div className={`${styles.imageContainer}`}>

@@ -1,5 +1,5 @@
-@import "@styles/utils/variables";
-@import "@styles/utils/_breakpoints";
+@import '@styles/utils/variables';
+@import '@styles/utils/_breakpoints';
 
 @keyframes jumpAnimation {
   0% {
@@ -60,7 +60,7 @@
     }
     @media screen and (max-width: $mobile) {
       font-size: $font-size-extra-large;
-      width: "100%";
+      width: '100%';
     }
   }
 }

@@ -4,7 +4,7 @@ module.exports = {
     defaultLocale: 'en',
   },
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: ['res.cloudinary.com'],
   },
   webpack: (config, { webpack }) => {
     config.plugins.push(

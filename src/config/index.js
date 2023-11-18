@@ -1,7 +1,7 @@
 import common from './common';
 
 const COMMON = {
-    ...common,
+  ...common,
 };
 
 export default COMMON;
