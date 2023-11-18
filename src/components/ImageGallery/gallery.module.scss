@@ -1,0 +1,27 @@
+@import '@styles/utils/variables';
+@import '@styles/utils/_breakpoints';
+
+.imagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-around;
+  z-index: -1;
+  margin-top: $spacing-larger;
+  row-gap: 20px;
+
+  @media screen and (max-width: $mobile) {
+    row-gap: 10px;
+  }
+}
+
+.imageContainer {
+  cursor: pointer;
+  margin: $spacing-small;
+  height: 200px;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.3s ease-in-out;
+  }
+}

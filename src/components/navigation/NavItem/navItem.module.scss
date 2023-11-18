@@ -1,0 +1,17 @@
+@import '@styles/utils/variables';
+
+.active {
+  color: $color-gold;
+}
+
+.navItem {
+  font-weight: bolder;
+  font-family: $font-family-main;
+  font-size: $font-size-medium-larger;
+
+  &:hover {
+    font-weight: bold;
+    color: $color-gold;
+    transition: all 0.3s;
+  }
+}
