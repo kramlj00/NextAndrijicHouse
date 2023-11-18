@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import en from "@locales/en";
 import hr from "@locales/hr";
-import LanguageOptions from "../../LanguageOptions";
+import LanguageOptions from "../../LanguageOptions/LanguageOptions";
 import NavItem from "../NavItem";
 import styles from "./sidebar.module.scss";
 
