@@ -1,4 +1,4 @@
-export default {
+const hr = {
   homeSayingPartOne: "Uživajte u luksuznom",
   homeSayingPartTwo: "iskustvu",
   roomsSayingPartOne: "Uživajte u",
@@ -37,3 +37,5 @@ export default {
   messageTooShort: "Poruka nije dovoljno duga",
   messageTooLong: "Poruka ne smije imati više od 3000 znakova",
 };
+
+export default hr

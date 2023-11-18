@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@types/node": "20.9.1",
     "@types/react": "18.2.37",
+    "eslint": "^8.54.0",
     "fslightbox-react": "^1.6.2-2",
     "typescript": "5.2.2"
   }

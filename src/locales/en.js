@@ -1,4 +1,4 @@
-export default {
+const en = {
   homeSayingPartOne: "Enjoy a luxury",
   homeSayingPartTwo: "experience",
   roomsSayingPartOne: "Enjoy your",
@@ -37,3 +37,5 @@ export default {
   messageTooShort: "This is not long enough to be a message",
   messageTooLong: "Your message can't be longer than 3000 characters",
 };
+
+export default en;
