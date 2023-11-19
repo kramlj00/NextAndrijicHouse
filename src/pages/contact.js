@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import useSiteConfig from '@shared/hooks/useSiteConfig';
-import ContactForm from '@features/contactUs/ContactForm';
+import ContactUs from '@features/contactUs/ContactUs';
 import Layout from '../layout/layout';
 import en from '@locales/en';
 import hr from '@locales/hr';
@@ -31,7 +31,7 @@ export default function Contact() {
           ],
         }}
       />
-      <ContactForm />
+      <ContactUs />
     </Layout>
   );
 }

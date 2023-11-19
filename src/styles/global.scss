@@ -27,12 +27,12 @@ h1 {
   }
 }
 input {
-  border: none;
-  padding: 12px 15px;
-  margin-bottom: 5px;
+  border: 2px solid rgb(231, 231, 231);
+  border-radius: 0.5rem;
+  padding: 1rem;
   width: 100%;
   font-family: $font-family-main;
-  background-color: $color-gray-10;
+  transition: 0.5s;
 
   @media screen and (max-width: $small) {
     font-size: $font-size-medium-small;
@@ -40,14 +40,23 @@ input {
     margin-right: 0px;
   }
 }
+input:focus {
+  border: 2px solid $color-light90;
+}
+
 textarea {
-  border: none;
-  padding: 12px 15px;
+  border: 2px solid rgb(231, 231, 231);
+  border-radius: 0.5rem;
+  padding: 1rem;
   width: 100%;
   resize: none;
-  background-color: $color-gray-10;
   font-family: $font-family-main;
+  transition: 0.5s;
 }
+textarea:focus {
+  border: 2px solid $color-light90;
+}
+
 .bookNowBtn {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -73,7 +82,7 @@ textarea {
 .andrijicHouseScrollbar {
   position: relative;
   scrollbar-width: thin;
-  scrollbar-color: #232323 #f7f7f7;
+  scrollbar-color: $color-light90 $color-light10;
 }
 
 .andrijicHouseScrollbar::-webkit-scrollbar {
@@ -85,14 +94,14 @@ textarea {
 }
 
 .andrijicHouseScrollbar::-webkit-scrollbar-thumb {
-  background-color: #232323;
+  background-color: $color-light90;
   border-radius: 5px;
   background-clip: content-box;
   border: 3px solid transparent;
 }
 
 .andrijicHouseScrollbar::-webkit-scrollbar-track {
-  background-color: #f7f7f7;
+  background-color: $color-light10;
 }
 
 .andrijicHouseScrollbar::-webkit-scrollbar-button {
