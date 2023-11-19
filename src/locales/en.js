@@ -15,7 +15,6 @@ const en = {
   contactUs: 'Contact us',
   bookNow: 'Book now',
   locationTitle: 'Location',
-  rightsInfo: 'All rights reserved.',
   address: 'Address',
   phoneNumber: 'Phone number',
   emailAddress: 'Email address',

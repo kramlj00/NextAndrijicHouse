@@ -15,7 +15,6 @@ const hr = {
   contactUs: 'Kontaktirajte nas',
   bookNow: 'Rezerviraj',
   locationTitle: 'Lokacija',
-  rightsInfo: 'Sva prava pridržana.',
   address: 'Adresa',
   phoneNumber: 'Broj mobitela',
   emailAddress: 'Email adresa',
