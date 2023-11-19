@@ -55,7 +55,6 @@ const ContactForm = () => {
         reset();
       }
     } catch (err) {
-      console.log(err);
       setStatus('error');
     }
   }
@@ -76,8 +75,7 @@ const ContactForm = () => {
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-delay="800"
-          className={styles.contentWrapper}
-        >
+          className={styles.contentWrapper}>
           <div className={styles.contactInfoContainer}>
             <div className={styles.contactInfoItem}>
               {t.emailAddress}
@@ -102,8 +100,7 @@ const ContactForm = () => {
             <h3>{t.sendUsEmail}</h3>
             <form
               className={styles.contactForm}
-              onSubmit={handleSubmit(onSubmitForm)}
-            >
+              onSubmit={handleSubmit(onSubmitForm)}>
               <div className={styles.inputContainer}>
                 <input
                   type="text"
@@ -183,8 +180,7 @@ const ContactForm = () => {
                 type="submit"
                 className={`${styles.sendEmailBtn} ${
                   isDisabled ? styles.sendDisabled : styles.sendEnabled
-                }`}
-              >
+                }`}>
                 {t.send}
               </button>
             </form>
