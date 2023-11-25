@@ -15,6 +15,7 @@ const en = {
   contactUs: 'Contact us',
   bookNow: 'Book now',
   locationTitle: 'Location',
+  reviewsTitle: 'Few words from our guests',
   address: 'Address',
   phoneNumber: 'Phone number',
   emailAddress: 'Email address',
@@ -35,6 +36,20 @@ const en = {
   messageRequired: 'You must enter your message',
   messageTooShort: 'Too short to be a message',
   messageTooLong: "Your message can't be longer than 3000 characters",
+  reviews: {
+    raneiro: {
+      country: "Croatia",
+      comment: "Great location, friendly host. Apartment with direct access to the sea! I recommend."
+    },
+    willj: {
+      country: "Italia",
+      comment: "Beautiful location and extremely friendly and helpful hosts. We will definitely be back. The only wind was from the south, but unfortunately that's how it went. Surely in another period it would be a perfect paradise!"
+    },
+    markus: {
+      country: "Austria",
+      comment: "The hosts, Tonči and Ivana, a very kind young couple, were waiting for us when we arrived and welcomed us warmly. The apartment is located in a very quiet, but excellent environment for a relaxing holiday. The view from the terrace of the apartment and the concrete terrace for swimming is beautiful. The terrace for swimming has a large umbrella and sunbeds, a ladder for a comfortable entry into the sea and even a canoe. The apartment is modernly decorated, with an outdoor grill, another outdoor refrigerator, a large covered terrace, everything is really perfect. We even received a bottle of very good wine and olive oil as a gift, both homemade. It couldn't be more perfect, really great. It's a pity that we booked only 5 days."
+    }
+  }
 };
 
 export default en;

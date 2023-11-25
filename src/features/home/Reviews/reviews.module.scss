@@ -1,0 +1,97 @@
+@import '@styles/utils/variables';
+@import '@styles/utils/_breakpoints';
+
+.reviewsSection {
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  width: 85%;
+}
+
+.reviewsContainer {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.singleReviewContainer {
+  width: 370px;
+  height: 245px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+
+.singleReviewContainerOpened {
+  height: 520px;
+  transition: all 0.5s ease-in-out;
+}
+
+.authorContainer {
+  padding-bottom: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.authorLogo {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoLetter {
+  color: $color-white;
+  font-size: 24px;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family-main;
+  justify-content: space-between;
+}
+
+.authorName {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.authorCountryContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.authorCountryName {
+  color: $color-gray-30;
+}
+
+.authorReview {
+  font-family: $font-family-main;
+  line-height: 24px;
+}
+
+.dateContainer {
+  font-family: $font-family-main;
+  color: $color-gray-30;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.showMore {
+  text-decoration: underline;
+  cursor: pointer;
+  padding-left: 4px;
+  color: $color-blue-20;
+}

@@ -13,6 +13,7 @@ const hr = {
   exterior: 'Eksterijer',
   contact: 'Kontakt',
   contactUs: 'Kontaktirajte nas',
+  reviewsTitle: 'Nekoliko riječi od naših gostiju',
   bookNow: 'Rezerviraj',
   locationTitle: 'Lokacija',
   address: 'Adresa',
@@ -35,6 +36,20 @@ const hr = {
   messageRequired: 'Morate unijeti poruku',
   messageTooShort: 'Poruka nije dovoljno duga',
   messageTooLong: 'Poruka ne smije imati više od 3000 znakova',
+  reviews: {
+    raneiro: {
+      country: "Hrvatska",
+      comment: "Odlična lokacija, ljubazan domaćin. Apartman sa izravnim pristupom u more! Preporučujem."
+    },
+    willj: {
+      country: "Italija",
+      comment: "Prekrasna lokacija i izuzetno ljubazni i korisni domaćini. Sigurno ćemo se vratiti. Jedino je puhalo jugo ali nažalost tako je prošlo. Sigurno bi u drugom razdoblju to bio savršen raj!"
+    },
+    markus: {
+      country: "Austrija",
+      comment: "Domaćini, Tonči i Ivana, vrlo ljubazan mladi par, čekali su nas kad smo stigli i toplo nas dočekali. Apartman se nalazi u vrlo mirnom, ali izvrsnom okruženju za opuštajući odmor. Pogled s terase apartmana i betonske terase za kupanje je prekrasan. Terasa za kupanje ima veliki suncobran i ležaljke, ljestve za ugodan ulazak u more pa čak i kanu. Apartman je moderno uređen, vanjski roštilj, drugi vanjski hladnjak, velika natkrivena terasa, sve je stvarno savršeno. Na poklon smo čak dobili bocu vrlo dobrog vina i maslinovog ulja, oboje domaće. Ne može biti savršenije, stvarno super. Šteta što smo rezervirali samo 5 dana u objektu."
+    }
+  }
 };
 
 export default hr;
