@@ -12,13 +12,14 @@
   position: relative;
   overflow: hidden;
   width: 90%;
-  margin-top: 50px;
+  margin-top: 60px;
   margin-bottom: 100px;
   background-color: $color-white;
   max-width: 1300px;
 
   @media screen and (max-width: 870px) {
     padding: 20px 40px;
+    margin-top: 50px;
   }
 }
 

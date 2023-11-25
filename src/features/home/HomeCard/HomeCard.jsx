@@ -11,12 +11,11 @@ const HomeCard = () => {
   const t = locale === 'en' ? en : hr;
 
   return (
-    <div>
+    <div className={styles.cardLocationContainer}>
       <section
         data-aos="fade-right"
         data-aos-duration="1000"
-        className={styles.cardContainer}
-      >
+        className={styles.cardContainer}>
         <div className={styles.leftSide}>
           <h1>{t.welcomeTitle}</h1>
           <p className={styles.description}>
@@ -25,8 +24,7 @@ const HomeCard = () => {
               className={styles.clickHere}
               href="https://www.booking.com/hotel/hr/apartment-zaglav-12208a.hr.html?aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGWIAQGYARC4ARfIAQzYAQPoAQGIAgGoAgO4ApzdhZYGwAIB0gIkYjkwMjdjZjMtN2QwNC00M2YzLWIxYzctYTJiM2IxNTg3ZWY52AIE4AIB&sid=9ea2f99d2546ae5288cab2ad92918067&atlas_src=sr_iw_btn;dest_id=2017;dest_type=region;dist=0;group_adults=2;group_children=0;no_rooms=1;room1=A%2CA;sb_price_type=total;type=total;ucfs=1&#availability_target"
               target="_blank"
-              rel="noreferrer"
-            >
+              rel="noreferrer">
               {t.here}
             </a>
             .
@@ -39,8 +37,7 @@ const HomeCard = () => {
       <section
         data-aos="fade-left"
         data-aos-duration="1000"
-        className={styles.locationContainer}
-      >
+        className={styles.locationContainer}>
         <h1>{t.locationTitle}</h1>
         <iframe
           title="house location"

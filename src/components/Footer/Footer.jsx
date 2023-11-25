@@ -32,7 +32,7 @@ const Footer = () => {
               <rect
                 x="0"
                 y="0"
-                width="2000"
+                width="100%"
                 height="800"
                 fill="url(#gradient)"
               />
