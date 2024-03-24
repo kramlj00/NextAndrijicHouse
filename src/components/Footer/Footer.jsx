@@ -57,7 +57,9 @@ const Footer = () => {
             className={styles.footerItemSubtitle}>
             tonci.andrijic@gmail.com
           </a>
-          <div className={styles.footerItemSubtitle}>+385 98 181 6135</div>
+          <a href="tel:0981816135" className={styles.footerItemSubtitle}>
+            +385 98 181 6135
+          </a>
           <a
             href="https://www.google.com/maps/dir//Andriji%C4%87+House+Zaglav+27+20271,+Blato/@42.9202342,16.7158599,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x134a720c5f6330cf:0x810796f65a20ec98!2m2!1d16.7158599!2d42.9202342?entry=ttu"
             target="_blank"
