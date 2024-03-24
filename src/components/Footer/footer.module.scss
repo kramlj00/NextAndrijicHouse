@@ -1,0 +1,154 @@
+@import '@styles/utils/variables';
+@import '@styles/utils/_breakpoints';
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 450px;
+  margin-top: 100px;
+  background-color: transparent;
+  position: relative;
+
+  .waveContainer {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+}
+
+.footerLogo {
+  color: $color-white;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 0 20px;
+  font-size: $font-size-extra-large;
+  z-index: 2;
+
+  @media screen and (max-width: $mobile) {
+    padding: 0 12px;
+    font-size: $font-size-large;
+  }
+}
+
+.separatorBar {
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  @media screen and (max-width: $mobile) {
+    margin-bottom: 20px;
+  }
+}
+
+.horizontalLine {
+  height: 1px;
+  width: 200px;
+  background-color: whitesmoke;
+  z-index: 2;
+
+  @media screen and (max-width: $tablet) {
+    width: 110px;
+  }
+  @media screen and (max-width: $mobile) {
+    width: 50px;
+  }
+}
+
+.footerItemsContainer {
+  display: flex;
+  width: 100%;
+  padding: 0 6rem;
+  justify-content: space-between;
+  font-family: $font-family-main;
+  color: $color-white;
+  z-index: 2;
+  max-width: 1500px;
+  margin: auto;
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0;
+  }
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.footerItemTitle {
+  cursor: pointer;
+  color: $color-white;
+  font-size: $font-size-medium-large;
+
+  @media screen and (max-width: $tablet) {
+    font-size: $font-size-medium-larger;
+    text-align: center;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-medium;
+  }
+}
+
+.footerItemSubtitle {
+  font-weight: 700;
+  padding-top: 16px;
+  color: $color-gray-10;
+  font-size: $font-size-medium;
+
+  @media screen and (max-width: $tablet) {
+    text-align: center;
+    padding-top: 10px;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-medium-small;
+    text-align: center;
+  }
+}
+
+.rightsContainer {
+  display: flex;
+  align-items: center;
+  line-height: 25px;
+  justify-content: space-between;
+  color: $color-gray-30;
+  font-family: $font-family-main;
+  margin-bottom: 10px;
+  text-align: center;
+  z-index: 2;
+  padding: 0 6rem;
+  font-size: $font-size-medium-small;
+  max-width: 1500px;
+  width: 100%;
+
+  @media screen and (max-width: $tablet) {
+    padding: 0 $spacing-extra-large;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding-top: 20px;
+    flex-direction: column;
+  }
+}
+
+.createdBy {
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-medium-small;
+  }
+}
+
+.createdByName {
+  font-weight: 700;
+  color: #95989c;
+}

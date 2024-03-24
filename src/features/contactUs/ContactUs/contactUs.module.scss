@@ -1,0 +1,65 @@
+@import '@styles/utils/variables';
+@import '@styles/utils/_breakpoints';
+
+.contactContainer {
+  padding: 30px 100px;
+  margin: auto;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  background-color: $color-white;
+  max-width: 1300px;
+
+  @media screen and (max-width: 870px) {
+    padding: 20px 40px;
+    margin-top: 50px;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  font-family: $font-family-main;
+
+  @media screen and (max-width: 830px) {
+    flex-direction: column;
+  }
+}
+
+.contactInfoContainer {
+  @media screen and (max-width: 830px) {
+    margin-bottom: 40px;
+  }
+}
+
+.contactInfoItem {
+  font-size: $font-size-medium-larger;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: $small) {
+    font-size: $font-size-medium;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 60px;
+
+    @media (max-width: $mobile) {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.contactInfoSubitemTwo {
+  padding-top: 10px;
+  font-weight: bold;
+}

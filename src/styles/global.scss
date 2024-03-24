@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
+@import './utils/_variables.scss';
+@import './utils/_breakpoints.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  margin: 0 !important;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1 {
+  font-weight: normal;
+  text-align: center;
+  font-family: $font-family-secondary;
+  font-size: $font-size-subtitle;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-large;
+  }
+}
+input {
+  border: 2px solid rgb(231, 231, 231);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  font-family: $font-family-main;
+  transition: 0.5s;
+
+  @media screen and (max-width: $small) {
+    font-size: $font-size-medium-small;
+    padding-left: 8px;
+    margin-right: 0px;
+  }
+}
+input:focus {
+  border: 2px solid $color-light90;
+}
+
+textarea {
+  border: 2px solid rgb(231, 231, 231);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  resize: none;
+  font-family: $font-family-main;
+  transition: 0.5s;
+}
+textarea:focus {
+  border: 2px solid $color-light90;
+}
+
+.bookNowBtn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: $spacing-small $spacing-large;
+  background-color: $color-gold;
+  color: $color-white;
+  font-size: $font-size-medium;
+  border: 1px solid $color-gold;
+
+  @media screen and (max-width: $mobile) {
+    padding: $spacing-small $spacing-medium;
+  }
+
+  &:hover {
+    background-color: #dbae6b;
+    transform: scale(1.03);
+    transition: all 0.4s ease-out;
+  }
+}
+
+.andrijicHouseScrollbar {
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: $color-light90 $color-light10;
+}
+
+.andrijicHouseScrollbar::-webkit-scrollbar {
+  width: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+.andrijicHouseScrollbar::-webkit-scrollbar-thumb {
+  background-color: $color-light90;
+  border-radius: 5px;
+  background-clip: content-box;
+  border: 3px solid transparent;
+}
+
+.andrijicHouseScrollbar::-webkit-scrollbar-track {
+  background-color: $color-light10;
+}
+
+.andrijicHouseScrollbar::-webkit-scrollbar-button {
+  display: none;
+}

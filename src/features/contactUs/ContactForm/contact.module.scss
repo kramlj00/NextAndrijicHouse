@@ -1,0 +1,85 @@
+@import '@styles/utils/variables';
+@import '@styles/utils/_breakpoints';
+
+.contactFormContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+
+  @media (max-width: $tablet) {
+    flex: 0.9;
+  }
+}
+
+.contactForm {
+  margin-top: 20px;
+}
+
+.sendEmailBtn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: $spacing-small $spacing-large;
+  font-size: $font-size-medium;
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 870px) {
+    padding: $spacing-small $spacing-medium;
+  }
+
+  &:hover {
+    background-color: $color-blue-10;
+    transition: all 0.35s ease-in-out;
+    opacity: 0.75;
+  }
+}
+
+.sendEnabled {
+  opacity: 0.9;
+  background-color: $color-blue-10;
+  color: $color-white;
+  border: 1px solid $color-blue-10;
+}
+
+.sendDisabled {
+  background-color: transparent;
+  border: 1px solid $color-gray-40;
+  pointer-events: none;
+}
+
+.loadingBtn {
+  background-color: $color-blue-10;
+  opacity: 0.6;
+}
+
+.inputContainer {
+  height: 90px;
+}
+
+.errorInput {
+  border: 2px solid $color-red-20;
+}
+
+.errorInput:focus {
+  border: 2px solid $color-red-20;
+}
+
+.errorMessage {
+  color: $color-red-20;
+  font-size: $font-size-medium-small;
+
+  @media screen and (max-width: $tablet) {
+    font-size: $font-size-medium-small;
+  }
+}
+
+.textareaContainer {
+  height: 190px;
+}
