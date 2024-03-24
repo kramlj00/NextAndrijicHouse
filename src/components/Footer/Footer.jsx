@@ -57,7 +57,7 @@ const Footer = () => {
             className={styles.footerItemSubtitle}>
             tonci.andrijic@gmail.com
           </a>
-          <a href="tel:0981816135" className={styles.footerItemSubtitle}>
+          <a href="tel:+385981816135" className={styles.footerItemSubtitle}>
             +385 98 181 6135
           </a>
           <a
