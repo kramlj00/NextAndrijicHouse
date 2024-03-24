@@ -12,8 +12,8 @@ const SingleReview = ({ review }) => {
 
   const [showMore, setShowMore] = useState(false);
 
-  const reviewSubstring = t.reviews[review.key].comment.substring(0, 150);
-  const otherReviewSubstring = t.reviews[review.key].comment.slice(150);
+  const reviewSubstring = t.reviews[review.key].comment.substring(0, 200);
+  const otherReviewSubstring = t.reviews[review.key].comment.slice(200);
   const hasMoreReview = !!otherReviewSubstring;
 
   return (
@@ -43,6 +43,7 @@ const SingleReview = ({ review }) => {
               </p>
             </div>
           </div>
+          <p className={styles.dateContainer}>{review.date}</p>
         </div>
         <div className={styles.authorReview}>
           <span>
@@ -61,7 +62,6 @@ const SingleReview = ({ review }) => {
           )}
         </div>
       </div>
-      <p className={styles.dateContainer}>{review.date}</p>
     </div>
   );
 };

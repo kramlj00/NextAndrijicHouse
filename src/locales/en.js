@@ -42,8 +42,8 @@ const en = {
       comment: "Great location, friendly host. Apartment with direct access to the sea! I recommend."
     },
     willj: {
-      country: "Italia",
-      comment: "Beautiful location and extremely friendly and helpful hosts. We will definitely be back. The only wind was from the south, but unfortunately that's how it went. Surely in another period it would be a perfect paradise!"
+      country: "Italy",
+      comment: "Beautiful location and extremely friendly and helpful hosts. We will definitely be back. The only thing was the sirocco wind, but surely in another period it would have been a perfect paradise!"
     },
     markus: {
       country: "Austria",

@@ -5,21 +5,24 @@
   margin: auto;
   margin-top: 60px;
   margin-bottom: 10px;
-  width: 85%;
+  width: 90%;
 }
 
 .reviewsContainer {
-  margin: auto;
   margin-top: 20px;
   display: flex;
-  justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  @media screen and (max-width: 1350px) {
+    justify-content: center;
+  }
 }
 
 .singleReviewContainer {
-  width: 370px;
-  height: 245px;
+  width: 380px;
+  height: 250px;
   border-radius: 25px;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
   padding: 18px;
@@ -27,11 +30,33 @@
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
+
+  @media screen and (max-width: $mobile) {
+    height: fit-content;
+
+    &:nth-child(3) {
+      height: 280px;
+    }
+  }
 }
 
 .singleReviewContainerOpened {
-  height: 520px;
+  height: 545px;
   transition: all 0.5s ease-in-out;
+
+  @media screen and (max-width: $mobile) {
+    height: fit-content;
+
+    &:nth-child(3) {
+      height: 550px;
+    }
+  }
+
+  @media screen and (max-width: $xs) {
+    &:nth-child(3) {
+      height: 730px;
+    }
+  }
 }
 
 .authorContainer {
@@ -47,6 +72,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .logoLetter {

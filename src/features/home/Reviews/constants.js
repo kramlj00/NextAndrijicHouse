@@ -1,7 +1,7 @@
 export const REVIEWS = [{
     key: "raneiro",
     logoColor: "#1277b0",
-    authorName: "Raneiro",
+    authorName: "Raniero",
     authorCountrySymbol: "hr",
     date: "10.09.2023."
 }, {

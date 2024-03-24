@@ -43,7 +43,7 @@ const hr = {
     },
     willj: {
       country: "Italija",
-      comment: "Prekrasna lokacija i izuzetno ljubazni i korisni domaćini. Sigurno ćemo se vratiti. Jedino je puhalo jugo ali nažalost tako je prošlo. Sigurno bi u drugom razdoblju to bio savršen raj!"
+      comment: "Prekrasna lokacija i izuzetno ljubazni i korisni domaćini. Sigurno ćemo se vratiti. Jedino je puhalo jugo, ali sigurno bi u drugom razdoblju to bio savršeni raj!"
     },
     markus: {
       country: "Austrija",
