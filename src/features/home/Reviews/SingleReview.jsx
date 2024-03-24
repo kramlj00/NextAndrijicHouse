@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import en from '@locales/en';
 import hr from '@locales/hr';
