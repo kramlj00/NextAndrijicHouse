@@ -12,7 +12,10 @@ const Reviews = () => {
   const t = locale === 'en' ? en : hr;
 
   return (
-    <section className={styles.reviewsSection}>
+    <section
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      className={styles.reviewsSection}>
       <h1>{t.reviewsTitle}</h1>
       <div className={styles.reviewsContainer}>
         {REVIEWS.map((review) => (
