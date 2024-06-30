@@ -5,6 +5,7 @@ import { DefaultSeo } from 'next-seo';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import useSiteConfig from '../shared/hooks/useSiteConfig';
+import { Slide, ToastContainer } from 'react-toastify';
 
 export default function App({ Component, pageProps }) {
   const siteConfig = useSiteConfig();
@@ -31,6 +32,15 @@ export default function App({ Component, pageProps }) {
             },
           ],
         }}
+      />
+      <ToastContainer
+        position="bottom-right"
+        rtl={false}
+        closeButton={false}
+        style={{ width: 'max-content' }}
+        autoClose={2500}
+        transition={Slide}
+        hideProgressBar={true}
       />
       <Component {...pageProps} />
     </>

@@ -4,11 +4,13 @@
 .imagesContainer {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
   flex: 1;
   justify-content: space-around;
   z-index: -1;
   margin-top: $spacing-larger;
   row-gap: 20px;
+  max-width: 1500px;
 
   @media screen and (max-width: $mobile) {
     row-gap: 10px;

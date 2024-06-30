@@ -1,8 +1,17 @@
 @import '@styles/utils/variables';
 @import '@styles/utils/_breakpoints';
 
+.cardLocationContainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  max-width: 1500px;
+}
+
 .cardContainer {
   display: flex;
+  margin: auto;
   margin-top: 60px;
   margin-bottom: 100px;
   width: 100%;
@@ -78,7 +87,7 @@
   }
 
   .map {
-    width: 80%;
+    width: 85%;
     height: 500px;
     margin-top: 20px;
     border: none;
