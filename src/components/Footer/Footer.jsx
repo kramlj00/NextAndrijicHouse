@@ -49,9 +49,6 @@ const Footer = () => {
       </section>
       <section className={styles.footerItemsContainer}>
         <div className={styles.itemContainer}>
-          <Link href={'/contact'} legacyBehavior>
-            <div className={styles.footerItemTitle}>{t.contactUs}</div>
-          </Link>
           <a
             href="mailto:tonci.andrijic@gmail.com"
             className={styles.footerItemSubtitle}>

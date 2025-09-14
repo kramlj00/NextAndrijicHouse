@@ -24,7 +24,6 @@ export default function Layout({ children, activeTab }) {
         <link rel="canonical" href="https://andrijichouse.com/hr" />
         <link rel="canonical" href="https://andrijichouse.com/hr/rooms" />
         <link rel="canonical" href="https://andrijichouse.com/hr/exterior" />
-        <link rel="canonical" href="https://andrijichouse.com/hr/contact" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${isOpen ? styles.pageContainer : ''}`}>
