@@ -31,7 +31,7 @@ export default function MainImage({
       <section className={styles.sayingWrapper}>
         <h1 className={styles.saying}>
           {t.homeWelcomeTitle}{' '}
-          <span className={styles.sayingSpan}>Andrijić House</span>
+          <p className={styles.sayingSpan}>Andrijić House</p>
         </h1>
         <p className={styles.sayingText}>{t.homeWelcomeText}</p>
         <div className={styles.propertyDetails}>

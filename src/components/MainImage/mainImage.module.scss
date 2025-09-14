@@ -44,7 +44,6 @@
     z-index: 2;
     align-items: center;
     gap: 24px;
-    padding: 24px;
   }
 
   .saying {
@@ -60,11 +59,10 @@
     }
     @media screen and (max-width: $tablet) {
       font-size: $font-size-subtitle;
-      width: 400px;
+      line-height: 64px;
     }
     @media screen and (max-width: $mobile) {
       font-size: $font-size-extra-large;
-      width: '100%';
     }
   }
 
@@ -78,6 +76,13 @@
     background-clip: text;
     font-weight: 700;
     animation: gradientShift 3s ease-in-out infinite;
+
+    @media screen and (max-width: $tablet) {
+      font-size: $font-size-subtitle-large;
+    }
+    @media screen and (max-width: $mobile) {
+      font-size: $font-size-extra-large;
+    }
   }
 
   @keyframes gradientShift {
@@ -98,6 +103,17 @@
     color: $color-white;
     width: 600px;
     line-height: 32px;
+
+    @media screen and (max-width: $tablet) {
+      font-size: $font-size-medium-larger;
+      line-height: 24px;
+      width: 500px;
+    }
+    @media screen and (max-width: $mobile) {
+      font-size: $font-size-medium;
+      line-height: 20px;
+      width: 350px;
+    }
   }
 
   .propertyDetails {
@@ -111,16 +127,12 @@
     z-index: 2;
 
     @media screen and (max-width: $tablet) {
-      bottom: 100px;
-      font-size: $font-size-small;
+      font-size: $font-size-medium-small;
       gap: 8px;
     }
 
     @media screen and (max-width: $mobile) {
-      bottom: 90px;
       flex-direction: column;
-      gap: 4px;
-      text-align: center;
     }
   }
 
