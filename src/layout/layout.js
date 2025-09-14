@@ -26,7 +26,7 @@ export default function Layout({ children, activeTab }) {
         <link rel="canonical" href="https://andrijichouse.com/hr/exterior" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${isOpen ? styles.pageContainer : ''}`}>
+      <main>
         <header>
           <ToggleBars
             isOpen={isOpen}

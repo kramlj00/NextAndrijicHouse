@@ -55,8 +55,6 @@ export default function Rooms() {
       <MainImage
         src="/images/room-image.webp"
         name="room.jpg"
-        sayingFirstPart={t.roomsSayingPartOne}
-        sayingSecondPart={t.roomsSayingPartTwo}
       />
       <ImageGallery imageList={roomsImages} />
     </Layout>

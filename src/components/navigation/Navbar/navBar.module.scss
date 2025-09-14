@@ -7,22 +7,32 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  // position: fixed;
+  position: fixed;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-  width: 100%;
-  top: 0;
+  width: calc(100% - 32px);
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 0 $spacing-large;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(120px);
+  border-radius: 100px;
+  transition: all 0.3s ease;
 
-  @media screen and (max-width: $small) {
-    padding: 0 $spacing-medium;
+  &.scrolled {
+    width: 100%;
+    top: 0;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
   }
 }
 
 .menuList {
   display: flex;
-  flex-grow: 0.25;
-  justify-content: space-between;
   align-items: center;
+  gap: 24px;
 
   @media screen and (max-width: $large) {
     display: none;
@@ -42,12 +52,19 @@
     cursor: pointer;
     opacity: 1;
     transition: all 0.7s ease-out;
+    border: none;
+    background: none;
+    outline: none;
   }
 
   .menuIconLine {
     width: 32px;
     height: 2px;
-    background-color: $color-gray-40;
+    background-color: white;
+
+    &.scrolled {
+      background-color: black;
+    }
   }
 
   .menuIconLineSecond {

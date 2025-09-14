@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NavItem from '../NavItem';
 import Logo from '@components/Logo';
 import styles from './navBar.module.scss';
@@ -12,6 +12,18 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : hr;
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      setIsScrolled(scrollTop >= viewportHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const MENU_LIST = [
     { text: `${t.rooms}`, href: '/rooms' },
@@ -19,38 +31,52 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
   ];
 
   return (
-    <header className={styles.navHeader}>
+    <header
+      className={`${styles.navHeader} ${isScrolled ? styles.scrolled : ''}`}>
       <Link href={'/'}>
         <Logo />
       </Link>
-      <div
+      <button
+        type="button"
         className={`${styles.hamburgerBar} ${
           isOpen && styles.openHamburgerBar
         }`}
-        onClick={toggle}>
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          toggle();
+        }}>
         <div
           className={`${styles.menuIconLine} ${
+            isScrolled ? styles.scrolled : ''
+          } ${
             isOpen ? styles.menuIconLineFirstX : styles.menuIconLineFirstXClose
           }`}></div>
         <div
           className={`${styles.menuIconLine} ${
+            isScrolled ? styles.scrolled : ''
+          } ${
             isOpen ? styles.menuIconLineSecondHidden : styles.menuIconLineSecond
           }`}></div>
         <div
           className={`${styles.menuIconLine} ${
+            isScrolled ? styles.scrolled : ''
+          } ${
             isOpen ? styles.menuIconLineThirdHidden : styles.menuIconLineThird
           }`}></div>
         <div
           className={`${styles.menuIconLine} ${
+            isScrolled ? styles.scrolled : ''
+          } ${
             isOpen
               ? styles.menuIconLineSecondX
               : styles.menuIconLineSecondXClose
           }`}></div>
-      </div>
+      </button>
       <div className={styles.menuList}>
         {MENU_LIST.map((menu) => (
           <div key={menu.text}>
-            <NavItem activeTab={activeTab} {...menu} />
+            <NavItem activeTab={activeTab} isScrolled={isScrolled} {...menu} />
           </div>
         ))}
         <a

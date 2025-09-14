@@ -14,42 +14,46 @@
 }
 
 .imageContainer {
-  height: 89vh;
+  height: 100vh;
   position: relative;
 
-  @media screen and (max-width: $desktop) {
-    height: 87vh;
-  }
-  @media screen and (max-width: $large) {
-    height: 85vh;
+  .imageMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 
   > .sayingWrapper {
     visibility: visible;
+    border-radius: 10px;
     width: fit-content;
     height: fit-content;
     display: flex;
     flex-flow: column;
     background: transparent;
     position: absolute;
-    top: 70%;
-    left: 79%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: $color-white;
-
-    @media screen and (max-width: $desktop) {
-      left: 50%;
-      top: 50%;
-    }
+    z-index: 2;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
   }
 
   .saying {
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
-    font-family: $font-family-secondary;
     font-size: $font-size-title;
+    font-family: $font-family-main;
     width: 550px;
+    line-height: 84px;
 
     @media screen and (max-width: $desktop) {
       font-size: $font-size-subtitle-large;
@@ -63,10 +67,80 @@
       width: '100%';
     }
   }
+
+  .sayingSpan {
+    font-family: $font-family-secondary;
+    font-size: $font-size-title;
+    background: linear-gradient(135deg, $color-gold, #ffffff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .sayingText {
+    font-size: $font-size-medium-large;
+    font-family: $font-family-main;
+    color: $color-white;
+    width: 600px;
+    line-height: 32px;
+  }
+
+  .propertyDetails {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $color-white;
+    font-size: $font-size-medium;
+    font-family: $font-family-main;
+    z-index: 2;
+
+    @media screen and (max-width: $tablet) {
+      bottom: 100px;
+      font-size: $font-size-small;
+      gap: 8px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      bottom: 90px;
+      flex-direction: column;
+      gap: 4px;
+      text-align: center;
+    }
+  }
+
+  .detailItem {
+    white-space: nowrap;
+  }
+
+  .detailSeparator {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+
+    @media screen and (max-width: $mobile) {
+      display: none;
+    }
+  }
 }
 
 .bookNowContainer {
   .bookNowHomeBtn {
+    z-index: 2;
     position: absolute;
     top: 93%;
     left: 50%;

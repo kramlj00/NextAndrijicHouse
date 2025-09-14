@@ -1,10 +1,8 @@
 const hr = {
-  homeSayingPartOne: 'Uživajte u luksuznom',
-  homeSayingPartTwo: 'iskustvu',
-  roomsSayingPartOne: 'Uživajte u',
-  roomsSayingPartTwo: 'odmoru iz snova',
-  exteriorSayingPartOne: 'Luksuz',
-  exteriorSayingPartTwo: 'uz more',
+  homeWelcomeTitle: "Dobro došli u",
+  homeWelcomeText: 'Doživite neusporedivu luksuznost na hrvatskoj obali. Vaše privatno utočište čeka vas s prekrasnim pogledom na more i uslugom svjetske klase.',
+  rating: 'Ocjena',
+  privateBeachAccess: 'Privatni Pristup Plaži',
   welcomeTitle: 'Dobro došli!',
   houseInfo:
     'Kuća za odmor za četiri osobe u mjestu Zaglav/Karbuni, Blato. Kuća ima potpuno opremljenu kuhinju, dnevni boravak, kupaonicu, dvije spavaće sobe i veliku natkrivenu terasu. Gosti mogu koristiti privatni roštilj, kanu i barku. Kuća se nalazi u prvom redu do mora i ima privatnu plažu sa suncobranom, ležaljkama i vanjskim tušem. Šljunčana javna plaža udaljena je 150m od kuće. Gostima je na raspolaganju privatni parking za 3 automobila i besplatni WiFi. Za informacije o dostupnosti i cijeni kliknite ',
