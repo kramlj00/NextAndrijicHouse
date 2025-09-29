@@ -1,0 +1,143 @@
+@import '../../../styles/utils/_variables.scss';
+@import '../../../styles/utils/_breakpoints.scss';
+
+.amenitiesContainer {
+  padding: $spacing-super-large 0;
+  text-align: center;
+
+  h1 {
+    margin-bottom: $spacing-large;
+    color: $color-light90;
+    font-family: $font-family-main;
+    font-weight: 700;
+  }
+}
+
+.amenitiesSubtitle {
+  font-family: $font-family-main;
+  font-size: $font-size-medium-large;
+  font-weight: 400;
+  color: $color-gray-30;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto $spacing-super-large auto;
+  line-height: 1.6;
+
+  @media screen and (max-width: $tablet) {
+    font-size: $font-size-medium;
+    margin-bottom: $spacing-large;
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-medium-small;
+    margin-bottom: $spacing-large;
+  }
+}
+
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $spacing-large;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 $spacing-large;
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: $spacing-medium;
+    padding: 0 $spacing-medium;
+  }
+
+  @media screen and (max-width: $mobile) {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: $spacing-small;
+    padding: 0 $spacing-small;
+  }
+}
+
+.amenityItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-extra-large;
+  background-color: $color-white;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: $spacing-large;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: $spacing-medium;
+  }
+}
+
+.amenityIcon {
+  font-size: 2.5rem;
+  margin-bottom: $spacing-medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  color: $color-white;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    margin-bottom: $spacing-small;
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: 1.5rem;
+    height: 40px;
+    width: 40px;
+    margin-bottom: $spacing-small;
+  }
+}
+
+.amenityTitle {
+  font-family: $font-family-main;
+  font-size: $font-size-medium;
+  font-weight: 600;
+  color: $color-light90;
+  text-align: center;
+  margin-bottom: $spacing-small;
+  line-height: 1.3;
+
+  @media screen and (max-width: $tablet) {
+    font-size: $font-size-medium-small;
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: $font-size-small;
+  }
+}
+
+.amenityDescription {
+  font-family: $font-family-main;
+  font-size: $font-size-medium-small;
+  font-weight: 400;
+  color: $color-gray-30;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+
+  @media screen and (max-width: $tablet) {
+    font-size: $font-size-small;
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: 0.7rem;
+  }
+}

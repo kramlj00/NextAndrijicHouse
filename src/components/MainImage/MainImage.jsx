@@ -5,12 +5,7 @@ import { useRouter } from 'next/router';
 import en from '@locales/en';
 import hr from '@locales/hr';
 
-export default function MainImage({
-  src,
-  name,
-  sayingFirstPart,
-  sayingSecondPart,
-}) {
+export default function MainImage({ src, name }) {
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : hr;

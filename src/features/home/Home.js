@@ -1,5 +1,6 @@
 import MainImage from '@components/MainImage';
 import HomeCard from '@features/home/HomeCard';
+import Amenities from './Amenities';
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         src="/images/exterior-image.webp"
         name="home.jpg"
       />
+      <Amenities />
       <HomeCard />
     </>
   );
