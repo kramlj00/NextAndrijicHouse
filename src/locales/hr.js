@@ -13,6 +13,7 @@ const hr = {
   bookNow: 'Rezerviraj',
   locationTitle: 'Lokacija',
   amenitiesTitle: 'Luksuzni Sadržaji i Značajke',
+  amenitiesSectionName: 'Sadržaji',
   amenitiesSubtitle: 'Svaki detalj je pažljivo odabran kako bi vaš boravak nadmašio očekivanja. Od privatnog pristupa plaži do vrhunskih sadržaja, doživite obalni luksuz u svom najboljem obliku.',
   amenities: {
     wifi: 'Besplatni WiFi',

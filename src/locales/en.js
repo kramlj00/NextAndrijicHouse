@@ -13,6 +13,7 @@ const en = {
   locationTitle: 'Location',
   reviewsTitle: 'Few words from our guests',
   amenitiesTitle: 'Luxury Amenities & Features',
+  amenitiesSectionName: 'Amenities',
   amenitiesSubtitle: 'Every detail has been carefully curated to ensure your stay exceeds expectations. From private beach access to premium amenities, experience coastal luxury at its finest.',
   amenities: {
     wifi: 'Free WiFi',

@@ -16,11 +16,13 @@ import {
   ShipIcon,
   ShowerHeadIcon,
   SnowflakeIcon,
+  Gem,
   TvIcon,
   UmbrellaIcon,
   WavesIcon,
   WifiIcon,
 } from 'lucide-react';
+import SectionTitle from '../../../components/SectionTitle';
 
 const Amenities = () => {
   const router = useRouter();
@@ -62,8 +64,12 @@ const Amenities = () => {
       data-aos="fade-up"
       data-aos-duration="1000"
       className={styles.amenitiesContainer}>
-      <h1>{t.amenitiesTitle}</h1>
-      <p className={styles.amenitiesSubtitle}>{t.amenitiesSubtitle}</p>
+      <SectionTitle
+        title={t.amenitiesTitle}
+        subTitle={t.amenitiesSubtitle}
+        sectionName={t.amenitiesSectionName}
+        icon={<Gem color="#1277b0" size={20} />}
+      />
       <div className={styles.amenitiesGrid}>
         {currentAmenities.map((amenity) => (
           <div key={amenity.key} className={styles.amenityItem}>
