@@ -3,6 +3,24 @@ import React, { useState } from 'react';
 import en from '@locales/en';
 import hr from '@locales/hr';
 import styles from './amenities.module.scss';
+import {
+  Anchor,
+  BathIcon,
+  BedIcon,
+  CarIcon,
+  ChefHatIcon,
+  Flame,
+  GiftIcon,
+  HouseIcon,
+  RockingChairIcon,
+  ShipIcon,
+  ShowerHeadIcon,
+  SnowflakeIcon,
+  TvIcon,
+  UmbrellaIcon,
+  WavesIcon,
+  WifiIcon,
+} from 'lucide-react';
 
 const Amenities = () => {
   const router = useRouter();
@@ -12,22 +30,22 @@ const Amenities = () => {
   const itemsPerPage = 8;
 
   const amenities = [
-    { key: 'wifi', icon: '📶' },
-    { key: 'parking', icon: '🚗' },
-    { key: 'beach', icon: '🏖️' },
-    { key: 'kitchen', icon: '🍳' },
-    { key: 'terrace', icon: '🏠' },
-    { key: 'barbecue', icon: '🔥' },
-    { key: 'canoe', icon: '🛶' },
-    { key: 'boat', icon: '⛵' },
-    { key: 'sunbeds', icon: '🪑' },
-    { key: 'umbrella', icon: '☂️' },
-    { key: 'shower', icon: '🚿' },
-    { key: 'bedrooms', icon: '🛏️' },
-    { key: 'tv', icon: '📺' },
-    { key: 'airConditioning', icon: '❄️' },
-    { key: 'bathroom', icon: '🛁' },
-    { key: 'welcomeGift', icon: '🎁' },
+    { key: 'wifi', icon: WifiIcon },
+    { key: 'parking', icon: CarIcon },
+    { key: 'beach', icon: WavesIcon },
+    { key: 'kitchen', icon: ChefHatIcon },
+    { key: 'terrace', icon: HouseIcon },
+    { key: 'barbecue', icon: Flame },
+    { key: 'canoe', icon: ShipIcon },
+    { key: 'boat', icon: Anchor },
+    { key: 'sunbeds', icon: RockingChairIcon },
+    { key: 'umbrella', icon: UmbrellaIcon },
+    { key: 'shower', icon: ShowerHeadIcon },
+    { key: 'bedrooms', icon: BedIcon },
+    { key: 'tv', icon: TvIcon },
+    { key: 'airConditioning', icon: SnowflakeIcon },
+    { key: 'bathroom', icon: BathIcon },
+    { key: 'welcomeGift', icon: GiftIcon },
   ];
 
   const totalPages = Math.ceil(amenities.length / itemsPerPage);
@@ -49,7 +67,9 @@ const Amenities = () => {
       <div className={styles.amenitiesGrid}>
         {currentAmenities.map((amenity) => (
           <div key={amenity.key} className={styles.amenityItem}>
-            <div className={styles.amenityIcon}>{amenity.icon}</div>
+            <div className={styles.amenityIcon}>
+              <amenity.icon color="#1277b0" size={24} />
+            </div>
             <h3 className={styles.amenityTitle}>{t.amenities[amenity.key]}</h3>
             <p className={styles.amenityDescription}>
               {t.amenitiesDescriptions[amenity.key]}

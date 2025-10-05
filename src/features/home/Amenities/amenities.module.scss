@@ -2,7 +2,8 @@
 @import '../../../styles/utils/_breakpoints.scss';
 
 .amenitiesContainer {
-  padding: $spacing-super-large 0;
+  padding: 80px 0;
+  margin: 0 24px;
   text-align: center;
 
   h1 {
@@ -10,6 +11,11 @@
     color: $color-light90;
     font-family: $font-family-main;
     font-weight: 700;
+  }
+
+  @media screen and (max-width: $mobile) {
+    margin: 0 16px;
+    padding: 64px 0;
   }
 }
 
@@ -20,12 +26,13 @@
   color: $color-gray-30;
   text-align: center;
   max-width: 800px;
-  margin: 0 auto $spacing-super-large auto;
+  margin: 0 auto 80px auto;
   line-height: 1.6;
 
   @media screen and (max-width: $tablet) {
     font-size: $font-size-medium;
     margin-bottom: $spacing-large;
+    max-width: 540px;
   }
 
   @media screen and (max-width: $mobile) {
@@ -64,7 +71,6 @@
   border-radius: 12px;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
-  cursor: pointer;
 
   &:hover {
     transform: translateY(-5px);
@@ -88,7 +94,8 @@
   justify-content: center;
   height: 60px;
   width: 60px;
-  border-radius: 50%;
+  border-radius: 100%;
+  border: 1px solid #1277b0;
   color: $color-white;
 
   @media screen and (max-width: $tablet) {
