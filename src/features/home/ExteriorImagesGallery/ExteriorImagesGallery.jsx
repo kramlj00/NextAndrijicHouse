@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import en from '@locales/en';
 import hr from '@locales/hr';
-import { ImagesIcon } from 'lucide-react';
 import ImageGallery from '../ImageGallery';
 
 const ExteriorImagesGallery = () => {
@@ -11,31 +10,35 @@ const ExteriorImagesGallery = () => {
 
   const exteriorImages = [
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702141/exterior/exterior2-image_vpmxap.jpg',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702187/exterior/DJI_0363_eyqnuh.jpg',
       alt: 'Exterior view 1',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702142/exterior/exterior3-image_mnp0jn.jpg',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702143/exterior/exterior4-image_cvvmpo.jpg',
       alt: 'Exterior view 2',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702143/exterior/exterior4-image_cvvmpo.jpg',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702145/exterior/exterior11-image_f7j2hu.jpg',
       alt: 'Exterior view 3',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702143/exterior/exterior5-image_ph4ksj.jpg',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702142/exterior/exterior8-image_a2hfty.jpg',
       alt: 'Exterior view 4',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702145/exterior/exterior6-image_hid7eo.jpg',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702137/exterior/exterior16-image_b0qug0.jpg ',
       alt: 'Exterior view 5',
+    },
+    {
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702186/exterior/DJI_0365_bli0qr.jpg',
+      alt: 'Drone view 2',
     },
     {
       src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702143/exterior/exterior7-image_oukkjg.jpg',
       alt: 'Exterior view 6',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702142/exterior/exterior8-image_a2hfty.jpg',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702143/exterior/exterior5-image_ph4ksj.jpg',
       alt: 'Exterior view 7',
     },
     {
@@ -47,7 +50,7 @@ const ExteriorImagesGallery = () => {
       alt: 'Exterior view 9',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702145/exterior/exterior11-image_f7j2hu.jpg',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702142/exterior/exterior3-image_mnp0jn.jpg',
       alt: 'Exterior view 10',
     },
     {
@@ -67,7 +70,7 @@ const ExteriorImagesGallery = () => {
       alt: 'Exterior view 14',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702137/exterior/exterior16-image_b0qug0.jpg',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702140/exterior/exterior19-image_gbdirh.jpg',
       alt: 'Exterior view 15',
     },
     {
@@ -79,7 +82,7 @@ const ExteriorImagesGallery = () => {
       alt: 'Exterior view 17',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702140/exterior/exterior19-image_gbdirh.jpg',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702145/exterior/exterior6-image_hid7eo.jpg',
       alt: 'Exterior view 18',
     },
     {
@@ -95,12 +98,12 @@ const ExteriorImagesGallery = () => {
       alt: 'Exterior view 21',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702186/exterior/DJI_0356_qgqg2u.jpg',
-      alt: 'Drone view 1',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702141/exterior/exterior2-image_vpmxap.jpg',
+      alt: 'Drone view 8',
     },
     {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702186/exterior/DJI_0365_bli0qr.jpg',
-      alt: 'Drone view 2',
+      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702186/exterior/DJI_0356_qgqg2u.jpg',
+      alt: 'Drone view 1',
     },
     {
       src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702186/exterior/DJI_0357_mkzxrh.jpg',
@@ -121,10 +124,6 @@ const ExteriorImagesGallery = () => {
     {
       src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702183/exterior/DJI_0361_tfwlqg.jpg',
       alt: 'Drone view 7',
-    },
-    {
-      src: 'https://res.cloudinary.com/kristina1950/image/upload/v1659702187/exterior/DJI_0363_eyqnuh.jpg',
-      alt: 'Drone view 8',
     },
   ];
 

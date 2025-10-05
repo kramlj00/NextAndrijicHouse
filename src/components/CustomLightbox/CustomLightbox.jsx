@@ -110,6 +110,7 @@ const CustomLightbox = ({
               objectFit: 'contain',
               maxWidth: '100%',
               maxHeight: '100%',
+              borderRadius: '16px',
             }}
             onLoad={handleImageLoad}
             onError={handleImageError}

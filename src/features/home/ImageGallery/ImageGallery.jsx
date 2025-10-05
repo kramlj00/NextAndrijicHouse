@@ -8,9 +8,19 @@ import CustomLightbox from '../../../components/CustomLightbox';
 const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
+  // Calculate pagination
+  const totalPages = Math.ceil((imagesList?.length || 0) / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentImages = imagesList?.slice(startIndex, endIndex) || [];
 
   const openLightbox = (index) => {
-    setCurrentImageIndex(index);
+    // Calculate the actual index in the full images array
+    const actualIndex = startIndex + index;
+    setCurrentImageIndex(actualIndex);
     setIsLightboxOpen(true);
   };
 
@@ -20,6 +30,10 @@ const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
 
   const handleIndexChange = (newIndex) => {
     setCurrentImageIndex(newIndex);
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
   return (
@@ -35,15 +49,15 @@ const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
       />
 
       <div className={styles.imageGrid}>
-        {imagesList && imagesList.length > 0 ? (
-          imagesList.map((image, index) => (
+        {currentImages && currentImages.length > 0 ? (
+          currentImages.map((image, index) => (
             <button
-              key={index}
+              key={startIndex + index}
               onClick={() => openLightbox(index)}
               className={styles.imageButton}>
               <Image
                 src={image.src || '/placeholder.svg'}
-                alt={image.alt || `Image ${index + 1}`}
+                alt={image.alt || `Image ${startIndex + index + 1}`}
                 className={styles.imageThumbnail}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -55,6 +69,22 @@ const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
           <p>No images available</p>
         )}
       </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className={styles.pagination}>
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index + 1}
+              className={`${styles.paginationButton} ${
+                currentPage === index + 1 ? styles.active : ''
+              }`}
+              onClick={() => handlePageChange(index + 1)}>
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      )}
 
       <CustomLightbox
         isOpen={isLightboxOpen}
