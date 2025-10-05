@@ -1,6 +1,7 @@
 import MainImage from '@components/MainImage';
 import HomeCard from '@features/home/HomeCard';
 import Amenities from './Amenities';
+import ExteriorImagesGallery from './ExteriorImagesGallery';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
         name="home.jpg"
       />
       <Amenities />
+      <ExteriorImagesGallery />
       <HomeCard />
     </>
   );
