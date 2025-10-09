@@ -3,6 +3,7 @@ import HomeCard from '@features/home/HomeCard';
 import Amenities from './Amenities';
 import ExteriorImagesGallery from './ExteriorImagesGallery';
 import InteriorImagesGallery from './InteriorImagesGallery';
+import Testimonials from '../../components/Testimonials';
 
 const Home = () => {
   return (
@@ -14,6 +15,8 @@ const Home = () => {
       <Amenities />
       <ExteriorImagesGallery />
       <InteriorImagesGallery />
+      <Testimonials />
+
       <HomeCard />
     </>
   );
