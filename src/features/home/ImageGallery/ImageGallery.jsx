@@ -3,11 +3,13 @@ import SectionTitle from '../../../components/SectionTitle';
 import { ImagesIcon } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
-import CustomLightbox from '../../../components/CustomLightbox';
+import FsLightbox from 'fslightbox-react';
 
 const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1,
+  });
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
@@ -16,21 +18,6 @@ const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentImages = imagesList?.slice(startIndex, endIndex) || [];
-
-  const openLightbox = (index) => {
-    // Calculate the actual index in the full images array
-    const actualIndex = startIndex + index;
-    setCurrentImageIndex(actualIndex);
-    setIsLightboxOpen(true);
-  };
-
-  const closeLightbox = () => {
-    setIsLightboxOpen(false);
-  };
-
-  const handleIndexChange = (newIndex) => {
-    setCurrentImageIndex(newIndex);
-  };
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -53,7 +40,12 @@ const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
           currentImages.map((image, index) => (
             <button
               key={startIndex + index}
-              onClick={() => openLightbox(index)}
+              onClick={() =>
+                setLightboxController({
+                  toggler: !lightboxController.toggler,
+                  slide: index + 1,
+                })
+              }
               className={styles.imageButton}>
               <Image
                 src={image.src || '/placeholder.svg'}
@@ -85,13 +77,12 @@ const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
           ))}
         </div>
       )}
-
-      <CustomLightbox
-        isOpen={isLightboxOpen}
-        onClose={closeLightbox}
-        images={imagesList}
-        currentIndex={currentImageIndex}
-        onIndexChange={handleIndexChange}
+      <FsLightbox
+        toggler={lightboxController.toggler}
+        sources={imagesList.map((image) => image.src)}
+        slide={lightboxController.slide}
+        initialAnimation="scale-in-long"
+        slideChangeAnimation="scale-in"
       />
     </section>
   );
