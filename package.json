@@ -28,8 +28,11 @@
     "resend": "^6.0.3",
     "sass": "^1.54.3"
   },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "devDependencies": {
-    "@types/node": "20.9.1",
+    "@types/node": "^22.0.0",
     "@types/react": "18.2.37",
     "eslint": "^8.54.0",
     "typescript": "5.2.2"
