@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import en from '@locales/en';
 import hr from '@locales/hr';
-import ImageGallery from '../ImageGallery';
+import ImageGallery from '../../../components/ImageGallery';
 
 const ExteriorImagesGallery = () => {
   const router = useRouter();
@@ -129,9 +129,9 @@ const ExteriorImagesGallery = () => {
 
   return (
     <ImageGallery
-      title={t.imageGalleryTitle}
-      subTitle={t.imageGallerySubtitle}
-      sectionName={t.imageGallerySectionName}
+      title={t.exteriorImageGalleryTitle}
+      subTitle={t.exteriorImageGallerySubtitle}
+      sectionName={t.exteriorImageGallerySectionName}
       imagesList={exteriorImages}
     />
   );
