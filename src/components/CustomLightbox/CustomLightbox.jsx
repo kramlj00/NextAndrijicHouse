@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -12,6 +12,16 @@ const CustomLightbox = ({
   onIndexChange,
 }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [dragState, setDragState] = useState({
+    isDragging: false,
+    startX: 0,
+    startY: 0,
+    currentX: 0,
+    currentY: 0,
+    deltaX: 0,
+    deltaY: 0,
+  });
+  const imageRef = useRef(null);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -51,6 +61,85 @@ const CustomLightbox = ({
       setIsLoading(true);
     }
   }, [currentIndex, isOpen]);
+
+  // Drag event handlers
+  const getClientX = (event) => {
+    return event.touches ? event.touches[0].clientX : event.clientX;
+  };
+
+  const getClientY = (event) => {
+    return event.touches ? event.touches[0].clientY : event.clientY;
+  };
+
+  const handleDragStart = (event) => {
+    const clientX = getClientX(event);
+    const clientY = getClientY(event);
+
+    setDragState({
+      isDragging: true,
+      startX: clientX,
+      startY: clientY,
+      currentX: clientX,
+      currentY: clientY,
+      deltaX: 0,
+      deltaY: 0,
+    });
+  };
+
+  const handleDragMove = (event) => {
+    if (!dragState.isDragging) return;
+
+    event.preventDefault();
+    const clientX = getClientX(event);
+    const clientY = getClientY(event);
+
+    setDragState((prev) => ({
+      ...prev,
+      currentX: clientX,
+      currentY: clientY,
+      deltaX: clientX - prev.startX,
+      deltaY: clientY - prev.startY,
+    }));
+  };
+
+  const handleDragEnd = () => {
+    if (!dragState.isDragging) return;
+
+    const { deltaX, deltaY } = dragState;
+    const minSwipeDistance = 50; // Minimum distance to trigger image switch
+    const maxVerticalSwipe = 100; // Maximum vertical movement to allow horizontal swipe
+
+    // Check if it's a horizontal swipe (not vertical)
+    if (
+      Math.abs(deltaX) > Math.abs(deltaY) &&
+      Math.abs(deltaY) < maxVerticalSwipe
+    ) {
+      if (Math.abs(deltaX) > minSwipeDistance) {
+        if (deltaX > 0) {
+          // Swipe right - go to previous image
+          if (currentIndex > 0) {
+            onIndexChange(currentIndex - 1);
+          }
+        } else {
+          // Swipe left - go to next image
+          if (currentIndex < images.length - 1) {
+            onIndexChange(currentIndex + 1);
+          }
+        }
+      }
+    }
+
+    // Reset drag state
+    setDragState({
+      isDragging: false,
+      startX: 0,
+      startY: 0,
+      currentX: 0,
+      currentY: 0,
+      deltaX: 0,
+      deltaY: 0,
+    });
+  };
 
   if (!isOpen || !images || images.length === 0) {
     return null;
@@ -99,22 +188,41 @@ const CustomLightbox = ({
           </button>
         )}
 
-        <div className={styles.imageWrapper}>
+        <div
+          className={styles.imageWrapper}
+          onMouseDown={handleDragStart}
+          onMouseMove={handleDragMove}
+          onMouseUp={handleDragEnd}
+          onMouseLeave={handleDragEnd}
+          onTouchStart={handleDragStart}
+          onTouchMove={handleDragMove}
+          onTouchEnd={handleDragEnd}
+          style={{
+            cursor: dragState.isDragging ? 'grabbing' : 'grab',
+            userSelect: 'none',
+          }}>
           {isLoading && <div className={styles.spinner}></div>}
           <Image
+            ref={imageRef}
             src={currentImage.src}
             alt={currentImage.alt || `Image ${currentIndex + 1}`}
-            width={800}
-            height={600}
+            fill
             style={{
               objectFit: 'contain',
               maxWidth: '100%',
               maxHeight: '100%',
               borderRadius: '16px',
+              transform: dragState.isDragging
+                ? `translateX(${dragState.deltaX * 0.3}px)`
+                : 'translateX(0)',
+              transition: dragState.isDragging
+                ? 'none'
+                : 'transform 0.2s ease-out',
             }}
             onLoad={handleImageLoad}
             onError={handleImageError}
             className={styles.lightboxImage}
+            draggable={false}
           />
         </div>
 
