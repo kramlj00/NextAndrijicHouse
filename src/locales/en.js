@@ -11,6 +11,8 @@ const en = {
   exterior: 'Exterior',
   bookNow: 'Book now',
   locationTitle: 'Location',
+  locationSubtitle: 'Discover the stunning location of Andrijić House. From the pristine coastline to the lush Mediterranean gardens.',
+  locationSectionName: 'Location',
   reviewsTitle: 'Few words from our guests',
   testimonialsTitle: 'Testimonials',
   testimonialsSubtitle: 'What our guests say about us',

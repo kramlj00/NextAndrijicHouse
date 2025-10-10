@@ -4,6 +4,7 @@ import Amenities from './Amenities';
 import ExteriorImagesGallery from './ExteriorImagesGallery';
 import InteriorImagesGallery from './InteriorImagesGallery';
 import Testimonials from '../../components/Testimonials';
+import Location from '../../components/Location';
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
       <ExteriorImagesGallery />
       <InteriorImagesGallery />
       <Testimonials />
-
+      <Location />
       <HomeCard />
     </>
   );

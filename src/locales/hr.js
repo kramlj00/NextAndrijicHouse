@@ -15,6 +15,8 @@ const hr = {
   testimonialsSectionName: 'Testimonials',
   bookNow: 'Rezerviraj',
   locationTitle: 'Lokacija',
+  locationSubtitle: 'Otkrijte zadivljujuću lokaciju Andrijić House. Od netaknute obale do bujnih mediteranskih vrtova.',
+  locationSectionName: 'Lokacija',
   exteriorImageGalleryTitle: 'Eksterijer & Okoliš',
   exteriorImageGallerySubtitle: 'Otkrijte zadivljujuću arhitekturu i prirodnu ljepotu koja okružuje Andrijić House. Od netaknute obale do bujnih mediteranskih vrtova.',
   exteriorImageGallerySectionName: 'Eksterijer & Okoliš',
