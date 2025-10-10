@@ -18,7 +18,6 @@ const Home = () => {
       <InteriorImagesGallery />
       <Testimonials />
       <Location />
-      <HomeCard />
     </>
   );
 };

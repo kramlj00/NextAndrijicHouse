@@ -27,7 +27,7 @@ const Location = () => {
           className={styles.locationMap}
           style={{
             border: 0,
-            filter: 'invert(1) hue-rotate(180deg)',
+            // filter: 'invert(95%) hue-rotate(180deg)',
           }}
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
