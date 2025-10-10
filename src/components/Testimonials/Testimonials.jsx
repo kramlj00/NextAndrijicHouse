@@ -13,7 +13,19 @@ const Testimonials = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : hr;
 
-  const [showMore, setShowMore] = useState(false);
+  const [expandedTestimonials, setExpandedTestimonials] = useState({});
+
+  const StarRating = ({ rating = 5 }) => {
+    return (
+      <div className={styles.starRating}>
+        {[...Array(rating)].map((_, index) => (
+          <span key={index} className={styles.star}>
+            ★
+          </span>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <section
@@ -34,59 +46,49 @@ const Testimonials = () => {
           const otherTestimonialSubstring =
             t.reviews[testimonial.key].comment.slice(200);
           const hasMoreTestimonial = !!otherTestimonialSubstring;
+          const isExpanded = expandedTestimonials[testimonial.key] || false;
+
+          const toggleExpanded = () => {
+            setExpandedTestimonials((prev) => ({
+              ...prev,
+              [testimonial.key]: !prev[testimonial.key],
+            }));
+          };
+
           return (
             <div
               key={testimonial.key}
-              className={`${styles.singleTestimonialContainer} ${
-                showMore && styles.singleTestimonialContainerOpened
+              className={`${styles.testimonialCard} ${
+                isExpanded ? styles.expanded : ''
               }`}>
-              <div>
-                <div className={styles.authorContainer}>
-                  <div
-                    className={styles.authorLogo}
-                    style={{ backgroundColor: testimonial.logoColor }}>
-                    <h1 className={styles.logoLetter}>
-                      {testimonial.authorName[0]}
-                    </h1>
-                  </div>
-                  <div className={styles.authorInfo}>
-                    <p className={styles.authorName}>
-                      {testimonial.authorName}
-                    </p>
-                    <div className={styles.authorCountryContainer}>
-                      <Image
-                        key={testimonial.authorCountrySymbol}
-                        width={26}
-                        height={15}
-                        src={`/images/${testimonial.authorCountrySymbol}-flag.png`}
-                        alt={`${testimonial.authorCountrySymbol}-img`}
-                      />
-                      <p className={styles.authorCountryName}>
-                        {t.reviews[testimonial.key].country}
-                      </p>
-                    </div>
-                  </div>
-                  <p className={styles.dateContainer}>{testimonial.date}</p>
-                </div>
-                <div className={styles.authorTestimonial}>
-                  <span>
-                    „
-                    {`${testimonialSubstring}${
-                      hasMoreTestimonial && !showMore
-                        ? '...'
-                        : otherTestimonialSubstring
-                    }`}
-                    ”
+              <div className={styles.decorativeDot}></div>
+
+              <StarRating rating={5} />
+
+              <div className={styles.testimonialText}>
+                <span>
+                  &ldquo;
+                  {`${testimonialSubstring}${
+                    hasMoreTestimonial && !isExpanded
+                      ? '...'
+                      : otherTestimonialSubstring
+                  }`}
+                  &rdquo;
+                </span>
+                {hasMoreTestimonial && (
+                  <span className={styles.showMore} onClick={toggleExpanded}>
+                    {!isExpanded ? 'Show more' : 'Show Less'}
                   </span>
-                  {hasMoreTestimonial && (
-                    <span
-                      className={styles.showMore}
-                      onClick={() => setShowMore(!showMore)}>
-                      {!showMore ? 'Show more' : 'Show Less'}
-                    </span>
-                  )}
-                </div>
+                )}
               </div>
+
+              <div className={styles.authorName}>{testimonial.authorName}</div>
+
+              <div className={styles.authorLocation}>
+                {t.reviews[testimonial.key].country}
+              </div>
+
+              <div className={styles.reviewDate}>{testimonial.date}</div>
             </div>
           );
         })}
