@@ -15,9 +15,14 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 160px;
 
   @media screen and (max-width: 1350px) {
     justify-content: center;
+  }
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 128px;
   }
 }
 

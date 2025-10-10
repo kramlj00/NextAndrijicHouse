@@ -1,16 +1,26 @@
 @import '@styles/utils/variables';
 @import '@styles/utils/_breakpoints';
 
-.locationContainer {
-  padding: 0 0 80px 0;
+.container {
+  margin: 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: $color-light20;
 
   @media screen and (max-width: $tablet) {
-    padding: 0 0 64px 0;
+    padding: 64px 0;
   }
+}
+
+.contactUsContainer {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  max-width: 1400px;
 }
 
 .locationMapContainer {
@@ -19,8 +29,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 16px;
-  max-width: 1400px;
-  width: 100%;
+  width: 75%;
 
   @media screen and (min-width: $tablet) {
     padding: 0 24px;
@@ -31,10 +40,39 @@
   order: 2;
   height: 500px;
   width: 100%;
-  //   padding: 0 24px;
+}
 
-  //   @media screen and (min-width: $tablet) {
-  //     order: 1;
-  //     height: 100%;
-  //   }
+.contactUsDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.contactUsTitle {
+  font-size: $font-size-extra-large;
+  font-weight: 700;
+  color: $color-light90;
+  font-family: $font-family-main;
+  text-align: left;
+}
+
+.contactUsDescription {
+  font-size: $font-size-medium-large;
+  text-align: left;
+  font-family: $font-family-main;
+  margin-bottom: 24px;
+  margin-top: 16px;
+}
+
+.contactUsDetail {
+  font-size: 20px;
+  text-align: left;
+  font-family: $font-family-main;
+}
+
+.contactUsDetailContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
