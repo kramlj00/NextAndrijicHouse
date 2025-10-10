@@ -17,7 +17,7 @@ const Home = () => {
       <ExteriorImagesGallery />
       <InteriorImagesGallery />
       {/* <Testimonials /> */}
-      <Location />
+      {/* <Location /> */}
     </>
   );
 };
