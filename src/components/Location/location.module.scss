@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   background-color: $color-light20;
+  padding: 40px 0;
 
   @media screen and (max-width: $tablet) {
     padding: 24px 0;
@@ -58,7 +59,7 @@
 
 .contactUsTitle {
   font-size: $font-size-extra-large;
-  font-weight: 700;
+  font-weight: 500;
   color: $color-light90;
   font-family: $font-family-main;
   text-align: left;
