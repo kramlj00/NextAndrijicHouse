@@ -32,7 +32,7 @@
 .menuList {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 4px;
 
   @media screen and (max-width: $large) {
     display: none;
@@ -108,7 +108,11 @@
   }
 }
 
-.languageOptionsContainer {
+.navbarActionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
   @media screen and (max-width: $large) {
     display: none;
   }

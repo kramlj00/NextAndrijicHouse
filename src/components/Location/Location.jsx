@@ -14,6 +14,7 @@ const Location = () => {
     <div
       data-aos="fade-up"
       data-aos-duration="1000"
+      id="contact"
       className={styles.container}>
       <div className={styles.contactUsContainer}>
         <div className={styles.locationMapContainer}>

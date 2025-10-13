@@ -26,8 +26,11 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
   }, []);
 
   const MENU_LIST = [
-    { text: `${t.rooms}`, href: '/rooms' },
-    { text: `${t.exterior}`, href: '/exterior' },
+    { text: `${t.amenitiesSectionName}`, id: 'amenities' },
+    { text: `${t.exterior}`, id: 'exterior' },
+    { text: `${t.interior}`, id: 'interior' },
+    { text: `${t.testimonials}`, id: 'testimonials' },
+    { text: `${t.contact}`, id: 'contact' },
   ];
 
   return (
@@ -79,15 +82,15 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
             <NavItem activeTab={activeTab} isScrolled={isScrolled} {...menu} />
           </div>
         ))}
+      </div>
+      <div className={styles.navbarActionsContainer}>
+        <LanguageOptions isScrolled={isScrolled} />
         <a
           href="https://www.booking.com/hotel/hr/apartment-zaglav-12208a.hr.html?aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGWIAQGYARC4ARfIAQzYAQPoAQGIAgGoAgO4ApzdhZYGwAIB0gIkYjkwMjdjZjMtN2QwNC00M2YzLWIxYzctYTJiM2IxNTg3ZWY52AIE4AIB&sid=9ea2f99d2546ae5288cab2ad92918067&atlas_src=sr_iw_btn;dest_id=2017;dest_type=region;dist=0;group_adults=2;group_children=0;no_rooms=1;room1=A%2CA;sb_price_type=total;type=total;ucfs=1&#availability_target"
           target="_blank"
           rel="noreferrer">
           <button className="bookNowBtn">{t.bookNow}</button>
         </a>
-      </div>
-      <div className={styles.languageOptionsContainer}>
-        <LanguageOptions isScrolled={isScrolled} />
       </div>
     </header>
   );

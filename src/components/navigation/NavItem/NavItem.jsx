@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import styles from './navItem.module.scss';
 
-const NavItem = ({ text, href, activeTab, isScrolled }) => {
+const NavItem = ({ text, activeTab, isScrolled, id }) => {
   return (
     <Link
-      href={href}
+      href={`#${id}`}
       className={`${styles.navItem} ${
         activeTab === text ? styles.active : ''
       } ${isScrolled ? styles.scrolled : ''}`}>

@@ -29,6 +29,7 @@ const Testimonials = () => {
 
   return (
     <section
+      id="testimonials"
       data-aos="fade-right"
       data-aos-duration="1000"
       className={styles.testimonialsSection}>

@@ -3,15 +3,6 @@
 
 .languageOptions {
   position: relative;
-  margin-right: $spacing-larger;
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @media screen and (max-width: $large) {
-    margin-right: 0;
-  }
 }
 
 .currentLanguage {

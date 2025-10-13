@@ -61,6 +61,7 @@ const Amenities = () => {
 
   return (
     <section
+      id="amenities"
       data-aos="fade-up"
       data-aos-duration="1000"
       className={styles.amenitiesContainer}>

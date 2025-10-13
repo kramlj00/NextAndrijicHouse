@@ -81,6 +81,7 @@ const InteriorImagesGallery = () => {
 
   return (
     <ImageGallery
+      id="interior"
       title={t.interiorImageGalleryTitle}
       subTitle={t.interiorImageGallerySubtitle}
       sectionName={t.interiorImageGallerySectionName}
