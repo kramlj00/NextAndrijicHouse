@@ -87,7 +87,7 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
         </a>
       </div>
       <div className={styles.languageOptionsContainer}>
-        <LanguageOptions />
+        <LanguageOptions isScrolled={isScrolled} />
       </div>
     </header>
   );
