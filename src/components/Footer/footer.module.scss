@@ -75,6 +75,10 @@
   max-width: 1500px;
   margin: auto;
 
+  @media screen and (max-width: $large) {
+    padding: 0 24px;
+  }
+
   @media screen and (max-width: $tablet) {
     flex-direction: column;
     align-items: center;
@@ -93,15 +97,15 @@
 .footerItemTitle {
   cursor: pointer;
   color: $color-white;
-  font-size: $font-size-medium-large;
+  font-size: 20px;
 
   @media screen and (max-width: $tablet) {
-    font-size: $font-size-medium-larger;
+    // font-size: $font-size-medium-larger;
     text-align: center;
   }
-  @media screen and (max-width: $mobile) {
-    font-size: $font-size-medium;
-  }
+  // @media screen and (max-width: $mobile) {
+  //   font-size: $font-size-medium;
+  // }
 }
 
 .footerItemSubtitle {

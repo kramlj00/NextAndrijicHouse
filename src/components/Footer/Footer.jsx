@@ -12,8 +12,10 @@ const Footer = () => {
   const t = locale === 'en' ? en : hr;
 
   const footerItems = [
-    { label: `${t.rooms}`, path: '/rooms' },
-    { label: `${t.exterior}`, path: '/exterior' },
+    { label: `${t.amenitiesSectionName}`, path: 'amenities' },
+    { label: `${t.exterior}`, path: 'exterior' },
+    { label: `${t.interior}`, path: 'interior' },
+    { label: `${t.testimonials}`, path: 'testimonials' },
   ];
 
   return (
@@ -68,7 +70,7 @@ const Footer = () => {
         </div>
         {footerItems.map((footerItem) => (
           <div className={styles.itemContainer} key={footerItem.path}>
-            <Link href={footerItem.path} legacyBehavior>
+            <Link href={`#${footerItem.path}`}>
               <div className={styles.footerItemTitle}>{footerItem.label}</div>
             </Link>
           </div>
