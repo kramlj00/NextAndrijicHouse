@@ -25,7 +25,7 @@ const Location = () => {
               // filter: 'invert(95%) hue-rotate(180deg)',
             }}
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
         <div className={styles.contactUsDetails}>
