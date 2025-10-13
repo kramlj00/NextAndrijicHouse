@@ -25,8 +25,8 @@ const Footer = () => {
           style={{ display: 'flex', height: '100%' }}>
           <defs>
             <linearGradient id="gradient" gradientTransform="rotate(90)">
-              <stop offset="0" stopColor="white" />
-              <stop offset="0.75" stopColor="black" />
+              <stop offset="0.25" stopColor="white" />
+              <stop offset="1" stopColor="black" />
             </linearGradient>
             <mask id="mask">
               <rect
@@ -49,6 +49,7 @@ const Footer = () => {
       </section>
       <section className={styles.footerItemsContainer}>
         <div className={styles.itemContainer}>
+          <div className={styles.footerItemTitle}>{t.contactUs}</div>
           <a
             href="mailto:tonci.andrijic@gmail.com"
             className={styles.footerItemSubtitle}>
@@ -84,7 +85,9 @@ const Footer = () => {
         <span className={styles.createdBy}>
           Created by{' '}
           <a
-            href="mailto:kristinaramljak5@gmail.com"
+            href="https://portfolio-two-nu-83.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
             className={styles.createdByName}>
             Kristina Ramljak
           </a>
