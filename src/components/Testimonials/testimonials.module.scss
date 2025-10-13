@@ -3,7 +3,6 @@
 
 .testimonialsSection {
   margin: auto;
-  margin-top: 60px;
   margin-bottom: 10px;
   width: 90%;
 }
@@ -15,14 +14,14 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 160px;
+  // margin-bottom: 160px;
 
   @media screen and (max-width: 1350px) {
     justify-content: center;
   }
 
   @media screen and (max-width: $tablet) {
-    margin-bottom: 128px;
+    // margin-bottom: 128px;
   }
 }
 
