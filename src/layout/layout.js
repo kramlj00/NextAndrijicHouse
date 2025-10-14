@@ -6,7 +6,7 @@ import styles from './layout.module.scss';
 
 export const siteTitle = 'Andrijić House';
 
-export default function Layout({ children, activeTab }) {
+export default function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -31,7 +31,6 @@ export default function Layout({ children, activeTab }) {
           <ToggleBars
             isOpen={isOpen}
             setIsOpen={setIsOpen}
-            activeTab={activeTab}
           />
         </header>
         <div className={styles.mainContent}>{children}</div>

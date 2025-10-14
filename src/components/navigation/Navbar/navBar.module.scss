@@ -32,7 +32,8 @@
 .menuList {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 24px;
+  list-style: none;
 
   @media screen and (max-width: $large) {
     display: none;

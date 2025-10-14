@@ -1,15 +1,15 @@
-import Link from 'next/link';
 import styles from './navItem.module.scss';
 
-const NavItem = ({ text, activeTab, isScrolled, id }) => {
+const NavItem = ({ text, isActive, isScrolled, id }) => {
   return (
-    <Link
+    <a
       href={`#${id}`}
-      className={`${styles.navItem} ${
-        activeTab === text ? styles.active : ''
-      } ${isScrolled ? styles.scrolled : ''}`}>
+      className={`${styles.navItem} ${isActive ? styles.active : ''} ${
+        isScrolled ? styles.scrolled : ''
+      }`}>
       {text}
-    </Link>
+      <div className={styles.line} />
+    </a>
   );
 };
 

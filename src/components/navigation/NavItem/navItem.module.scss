@@ -1,37 +1,63 @@
 @import '@styles/utils/variables';
 
 .active {
-  color: $color-gold;
-  border-radius: 0.5rem;
-  backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  color: $color-black;
+  pointer-events: none;
+
+  .line {
+    width: 100%;
+  }
 
   &.scrolled {
-    color: $color-gold;
+    color: $color-white;
   }
 }
 
 .navItem {
-  font-weight: 500;
+  font-weight: 600;
   font-family: $font-family-main;
   font-size: $font-size-medium-larger;
   transition: all 0.3s;
-  padding: 0.5rem 0.75rem;
-  color: $color-white;
+  height: 100%;
+  position: relative;
+  // padding: 0.5rem 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    color: $color-gold;
-    border-radius: 0.5rem;
-    backdrop-filter: blur(4px);
-    background-color: rgba(255, 255, 255, 0.2);
+    color: $color-white;
+    font-weight: 600;
+
+    .line {
+      width: 100%;
+    }
   }
 
   &.scrolled {
-    color: black;
+    color: rgba(0, 0, 0, 0.6);
+
+    .line {
+      background-color: $color-gold;
+    }
 
     &:hover {
-      color: $color-gold;
+      color: $color-black;
     }
   }
+
+  &.active.scrolled {
+    color: $color-black;
+  }
+}
+
+.line {
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: $color-gold;
+  transition: width 0.3s ease-in-out;
+  z-index: 1;
+  border-radius: 100px;
 }

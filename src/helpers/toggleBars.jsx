@@ -2,15 +2,15 @@ import React from 'react';
 import Sidebar from '@components/navigation/Sidebar';
 import Navbar from '@components/navigation/Navbar';
 
-const ToggleBars = ({ activeTab, isOpen, setIsOpen }) => {
+const ToggleBars = ({ isOpen, setIsOpen }) => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <div>
-      <Sidebar activeTab={activeTab} isOpen={isOpen} />
-      <Navbar activeTab={activeTab} toggle={toggle} isOpen={isOpen} />
+      <Sidebar isOpen={isOpen} />
+      <Navbar toggle={toggle} isOpen={isOpen} />
     </div>
   );
 };

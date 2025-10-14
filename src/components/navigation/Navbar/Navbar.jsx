@@ -7,23 +7,16 @@ import LanguageOptions from '@components/LanguageOptions';
 import { useRouter } from 'next/router';
 import en from '@locales/en';
 import hr from '@locales/hr';
+import { usePathname } from 'next/navigation';
 
-const Navbar = ({ activeTab, toggle, isOpen }) => {
+const Navbar = ({ toggle, isOpen }) => {
+  const pathname = usePathname();
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : hr;
+
   const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      setIsScrolled(scrollTop >= viewportHeight);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [active, setActive] = useState('');
 
   const MENU_LIST = [
     { text: `${t.amenitiesSectionName}`, id: 'amenities' },
@@ -32,6 +25,55 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
     { text: `${t.testimonials}`, id: 'testimonials' },
     { text: `${t.contact}`, id: 'contact' },
   ];
+
+  useEffect(() => {
+    setActive(window.location.hash.slice(1) || '');
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      setIsScrolled(scrollTop >= viewportHeight);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const intersectingSection = entries.find(
+          (entry) => entry.isIntersecting,
+        );
+        if (intersectingSection) {
+          const id = intersectingSection.target.id;
+          setActive(id);
+          window.history.replaceState(null, '', `#${id}`);
+        } else {
+          setActive('');
+          window.history.replaceState(null, '', '/');
+        }
+      },
+      {
+        rootMargin: '-50% 0px -50% 0px',
+      },
+    );
+
+    MENU_LIST.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleNavLinkClick = (id) => {
+    setActive(id);
+    if (pathname !== '/') {
+      window.location.href = `/#${id}`;
+    }
+  };
 
   return (
     <header
@@ -76,13 +118,17 @@ const Navbar = ({ activeTab, toggle, isOpen }) => {
               : styles.menuIconLineSecondXClose
           }`}></div>
       </button>
-      <div className={styles.menuList}>
+      <ul className={styles.menuList}>
         {MENU_LIST.map((menu) => (
-          <div key={menu.text}>
-            <NavItem activeTab={activeTab} isScrolled={isScrolled} {...menu} />
-          </div>
+          <li key={menu.text} onClick={() => handleNavLinkClick(menu.id)}>
+            <NavItem
+              isActive={active === menu.id}
+              isScrolled={isScrolled}
+              {...menu}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
       <div className={styles.navbarActionsContainer}>
         <LanguageOptions isScrolled={isScrolled} />
         <a
