@@ -62,34 +62,40 @@ const Testimonials = () => {
               className={`${styles.testimonialCard} ${
                 isExpanded ? styles.expanded : ''
               }`}>
-              <div className={styles.decorativeDot}></div>
+              <div>
+                <div className={styles.decorativeDot}></div>
 
-              <StarRating rating={5} />
+                <StarRating rating={5} />
 
-              <div className={styles.testimonialText}>
-                <span>
-                  &ldquo;
-                  {`${testimonialSubstring}${
-                    hasMoreTestimonial && !isExpanded
-                      ? '...'
-                      : otherTestimonialSubstring
-                  }`}
-                  &rdquo;
-                </span>
-                {hasMoreTestimonial && (
-                  <span className={styles.showMore} onClick={toggleExpanded}>
-                    {!isExpanded ? 'Show more' : 'Show Less'}
+                <div className={styles.testimonialText}>
+                  <span>
+                    &ldquo;
+                    {`${testimonialSubstring}${
+                      hasMoreTestimonial && !isExpanded
+                        ? '...'
+                        : otherTestimonialSubstring
+                    }`}
+                    &rdquo;
                   </span>
-                )}
+                  {hasMoreTestimonial && (
+                    <span className={styles.showMore} onClick={toggleExpanded}>
+                      {!isExpanded ? 'Show more' : 'Show Less'}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              <div className={styles.authorName}>{testimonial.authorName}</div>
+              <div>
+                <div className={styles.authorName}>
+                  {testimonial.authorName}
+                </div>
 
-              <div className={styles.authorLocation}>
-                {t.reviews[testimonial.key].country}
+                <div className={styles.authorLocation}>
+                  {t.reviews[testimonial.key].country}
+                </div>
+
+                <div className={styles.reviewDate}>{testimonial.date}</div>
               </div>
-
-              <div className={styles.reviewDate}>{testimonial.date}</div>
             </div>
           );
         })}
