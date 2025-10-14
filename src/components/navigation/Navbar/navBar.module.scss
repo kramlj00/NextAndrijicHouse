@@ -31,6 +31,12 @@
   &.menuOpen {
     border-color: transparent;
   }
+
+  @media screen and (max-width: $tablet) {
+    top: 8px;
+    width: calc(100% - 16px);
+    height: 60px;
+  }
 }
 
 .logoContainer {

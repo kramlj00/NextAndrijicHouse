@@ -70,10 +70,6 @@ textarea:focus {
   border: 1px solid $color-gold;
   font-weight: bolder;
 
-  @media screen and (max-width: $mobile) {
-    padding: $spacing-small $spacing-medium;
-  }
-
   &:hover {
     background-color: #dbae6b;
     transform: scale(1.02);

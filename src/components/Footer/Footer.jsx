@@ -12,10 +12,10 @@ const Footer = () => {
   const t = locale === 'en' ? en : hr;
 
   const footerItems = [
-    { label: `${t.amenitiesSectionName}`, path: 'amenities' },
-    { label: `${t.exterior}`, path: 'exterior' },
-    { label: `${t.interior}`, path: 'interior' },
-    { label: `${t.testimonials}`, path: 'testimonials' },
+    { label: `${t.amenitiesSectionName}`, path: t.amenitiesHref },
+    { label: `${t.exterior}`, path: t.exteriorHref },
+    { label: `${t.interior}`, path: t.interiorHref },
+    { label: `${t.testimonials}`, path: t.testimonialsHref },
   ];
 
   return (
@@ -69,7 +69,7 @@ const Footer = () => {
           </a>
         </div>
         {footerItems.map((footerItem) => (
-          <div className={styles.itemContainer} key={footerItem.path}>
+          <div className={styles.navItemContainer} key={footerItem.path}>
             <Link href={`#${footerItem.path}`}>
               <div className={styles.footerItemTitle}>{footerItem.label}</div>
             </Link>
