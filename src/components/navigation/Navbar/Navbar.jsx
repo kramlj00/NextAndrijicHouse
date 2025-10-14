@@ -82,43 +82,7 @@ const Navbar = ({ toggle, isOpen, active, setActive }) => {
       <Link href={'/'} className={styles.logoContainer}>
         <Logo />
       </Link>
-      <button
-        type="button"
-        className={`${styles.hamburgerBar} ${
-          isOpen && styles.openHamburgerBar
-        }`}
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          toggle();
-        }}>
-        <div
-          className={`${styles.menuIconLine} ${
-            isScrolled ? styles.scrolled : ''
-          } ${
-            isOpen ? styles.menuIconLineFirstX : styles.menuIconLineFirstXClose
-          }`}></div>
-        <div
-          className={`${styles.menuIconLine} ${
-            isScrolled ? styles.scrolled : ''
-          } ${
-            isOpen ? styles.menuIconLineSecondHidden : styles.menuIconLineSecond
-          }`}></div>
-        <div
-          className={`${styles.menuIconLine} ${
-            isScrolled ? styles.scrolled : ''
-          } ${
-            isOpen ? styles.menuIconLineThirdHidden : styles.menuIconLineThird
-          }`}></div>
-        <div
-          className={`${styles.menuIconLine} ${
-            isScrolled ? styles.scrolled : ''
-          } ${
-            isOpen
-              ? styles.menuIconLineSecondX
-              : styles.menuIconLineSecondXClose
-          }`}></div>
-      </button>
+
       <ul className={styles.menuList}>
         {MENU_LIST.map((menu) => (
           <li key={menu.text} onClick={() => handleNavLinkClick(menu.id)}>
@@ -131,14 +95,58 @@ const Navbar = ({ toggle, isOpen, active, setActive }) => {
         ))}
       </ul>
 
-      <div className={styles.navbarActionsContainer}>
-        <LanguageOptions isScrolled={isScrolled} />
-        <a
-          href="https://www.booking.com/hotel/hr/apartment-zaglav-12208a.hr.html?aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGWIAQGYARC4ARfIAQzYAQPoAQGIAgGoAgO4ApzdhZYGwAIB0gIkYjkwMjdjZjMtN2QwNC00M2YzLWIxYzctYTJiM2IxNTg3ZWY52AIE4AIB&sid=9ea2f99d2546ae5288cab2ad92918067&atlas_src=sr_iw_btn;dest_id=2017;dest_type=region;dist=0;group_adults=2;group_children=0;no_rooms=1;room1=A%2CA;sb_price_type=total;type=total;ucfs=1&#availability_target"
-          target="_blank"
-          rel="noreferrer">
-          <button className="bookNowBtn">{t.bookNow}</button>
-        </a>
+      <div className={styles.navbarActions}>
+        <div className={styles.navbarActionsContainer}>
+          <LanguageOptions isScrolled={isScrolled} />
+          <a
+            href="https://www.booking.com/hotel/hr/apartment-zaglav-12208a.hr.html?aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGWIAQGYARC4ARfIAQzYAQPoAQGIAgGoAgO4ApzdhZYGwAIB0gIkYjkwMjdjZjMtN2QwNC00M2YzLWIxYzctYTJiM2IxNTg3ZWY52AIE4AIB&sid=9ea2f99d2546ae5288cab2ad92918067&atlas_src=sr_iw_btn;dest_id=2017;dest_type=region;dist=0;group_adults=2;group_children=0;no_rooms=1;room1=A%2CA;sb_price_type=total;type=total;ucfs=1&#availability_target"
+            target="_blank"
+            rel="noreferrer">
+            <button className="bookNowBtn">{t.bookNow}</button>
+          </a>
+        </div>
+
+        <button
+          type="button"
+          className={`${styles.hamburgerBar} ${
+            isOpen && styles.openHamburgerBar
+          }`}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggle();
+          }}>
+          <div
+            className={`${styles.menuIconLine} ${
+              isScrolled ? styles.scrolled : ''
+            } ${
+              isOpen
+                ? styles.menuIconLineFirstX
+                : styles.menuIconLineFirstXClose
+            }`}></div>
+          <div
+            className={`${styles.menuIconLine} ${
+              isScrolled ? styles.scrolled : ''
+            } ${
+              isOpen
+                ? styles.menuIconLineSecondHidden
+                : styles.menuIconLineSecond
+            }`}></div>
+          <div
+            className={`${styles.menuIconLine} ${
+              isScrolled ? styles.scrolled : ''
+            } ${
+              isOpen ? styles.menuIconLineThirdHidden : styles.menuIconLineThird
+            }`}></div>
+          <div
+            className={`${styles.menuIconLine} ${
+              isScrolled ? styles.scrolled : ''
+            } ${
+              isOpen
+                ? styles.menuIconLineSecondX
+                : styles.menuIconLineSecondXClose
+            }`}></div>
+        </button>
       </div>
     </header>
   );
