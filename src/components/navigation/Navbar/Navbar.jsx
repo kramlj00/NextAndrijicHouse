@@ -9,14 +9,13 @@ import en from '@locales/en';
 import hr from '@locales/hr';
 import { usePathname } from 'next/navigation';
 
-const Navbar = ({ toggle, isOpen }) => {
+const Navbar = ({ toggle, isOpen, active, setActive }) => {
   const pathname = usePathname();
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : hr;
 
   const [isScrolled, setIsScrolled] = useState(false);
-  const [active, setActive] = useState('');
 
   const MENU_LIST = [
     { text: `${t.amenitiesSectionName}`, id: t.amenitiesHref },
@@ -77,8 +76,10 @@ const Navbar = ({ toggle, isOpen }) => {
 
   return (
     <header
-      className={`${styles.navHeader} ${isScrolled ? styles.scrolled : ''}`}>
-      <Link href={'/'}>
+      className={`${styles.navHeader} ${isScrolled ? styles.scrolled : ''} ${
+        isOpen ? styles.menuOpen : ''
+      }`}>
+      <Link href={'/'} className={styles.logoContainer}>
         <Logo />
       </Link>
       <button
@@ -129,6 +130,7 @@ const Navbar = ({ toggle, isOpen }) => {
           </li>
         ))}
       </ul>
+
       <div className={styles.navbarActionsContainer}>
         <LanguageOptions isScrolled={isScrolled} />
         <a

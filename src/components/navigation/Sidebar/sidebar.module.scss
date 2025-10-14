@@ -2,34 +2,92 @@
 @import '@styles/utils/_breakpoints';
 
 .closeSidebar {
-  top: -100vh;
+  transform: translateY(-100%);
   opacity: 0;
-  transition: 800ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .openSidebar {
-  top: 0;
+  transform: translateY(0);
   opacity: 1;
-  transition: 800ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .sidebarContainer {
-  height: 100vh;
+  padding: 100px 24px 24px;
+  width: 100%;
   position: fixed;
-  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(120px);
+  font-family: $font-family-main;
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
-  backdrop-filter: blur(120px);
-  font-family: $font-family-main;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: $large) {
+    display: none;
+  }
 }
 
 .menuList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.menuItem {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: $font-size-medium-larger;
+  height: 35px;
+  width: 80%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color-white;
+  }
+
+  &.active {
+    color: $color-white;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  @media screen and (min-width: $medium) {
+    width: 50%;
+  }
+}
+
+.activeLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 100px;
+  background: $color-gold;
+}
+
+.sidebarActions {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 35px;
-  margin: auto;
+  gap: 16px;
+  margin-top: 24px;
+  padding-bottom: 16px;
 }

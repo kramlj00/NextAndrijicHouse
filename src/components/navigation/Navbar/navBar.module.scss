@@ -27,6 +27,14 @@
     border-left: 0;
     border-right: 0;
   }
+
+  &.menuOpen {
+    border-color: transparent;
+  }
+}
+
+.logoContainer {
+  z-index: 20;
 }
 
 .menuList {
@@ -62,6 +70,7 @@
     width: 32px;
     height: 2px;
     background-color: white;
+    border-radius: 100px;
 
     &.scrolled {
       background-color: black;
@@ -91,11 +100,13 @@
   .menuIconLineFirstX {
     transform: rotate(45deg) translate(10px, 5px);
     transition: all 0.7s ease-out;
+    background-color: white !important;
   }
 
   .menuIconLineSecondX {
     transform: rotate(-45deg) translate(11px, -5px);
     transition: all 0.7s ease-out;
+    background-color: white !important;
   }
 
   .menuIconLineFirstXClose {
@@ -116,5 +127,15 @@
 
   @media screen and (max-width: $large) {
     display: none;
+  }
+}
+
+.mobileNavMenu {
+  display: none;
+
+  @media screen and (max-width: $large) {
+    display: flex;
+    align-items: center;
+    z-index: 20;
   }
 }
