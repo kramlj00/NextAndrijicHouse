@@ -129,7 +129,7 @@ const ExteriorImagesGallery = () => {
 
   return (
     <ImageGallery
-      id="exterior"
+      id={t.exteriorHref}
       title={t.exteriorImageGalleryTitle}
       subTitle={t.exteriorImageGallerySubtitle}
       sectionName={t.exteriorImageGallerySectionName}

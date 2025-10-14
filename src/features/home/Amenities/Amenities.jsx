@@ -61,7 +61,7 @@ const Amenities = () => {
 
   return (
     <section
-      id="amenities"
+      id={t.amenitiesHref}
       data-aos="fade-up"
       data-aos-duration="1000"
       className={styles.amenitiesContainer}>

@@ -19,11 +19,11 @@ const Navbar = ({ toggle, isOpen }) => {
   const [active, setActive] = useState('');
 
   const MENU_LIST = [
-    { text: `${t.amenitiesSectionName}`, id: 'amenities' },
-    { text: `${t.exterior}`, id: 'exterior' },
-    { text: `${t.interior}`, id: 'interior' },
-    { text: `${t.testimonials}`, id: 'testimonials' },
-    { text: `${t.contact}`, id: 'contact' },
+    { text: `${t.amenitiesSectionName}`, id: t.amenitiesHref },
+    { text: `${t.exterior}`, id: t.exteriorHref },
+    { text: `${t.interior}`, id: t.interiorHref },
+    { text: `${t.testimonials}`, id: t.testimonialsHref },
+    { text: `${t.contact}`, id: t.contactHref },
   ];
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const Navbar = ({ toggle, isOpen }) => {
           window.history.replaceState(null, '', `#${id}`);
         } else {
           setActive('');
-          window.history.replaceState(null, '', '/');
+          window.history.replaceState(null, '', locale === 'en' ? '/' : '/hr');
         }
       },
       {
@@ -66,7 +66,7 @@ const Navbar = ({ toggle, isOpen }) => {
       observer.disconnect();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [locale]);
 
   const handleNavLinkClick = (id) => {
     setActive(id);

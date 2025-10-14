@@ -29,7 +29,7 @@ const Testimonials = () => {
 
   return (
     <section
-      id="testimonials"
+      id={t.testimonialsHref}
       data-aos="fade-right"
       data-aos-duration="1000"
       className={styles.testimonialsSection}>
