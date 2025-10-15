@@ -6,7 +6,7 @@ import styles from './layout.module.scss';
 
 export const siteTitle = 'Andrijić House';
 
-export default function Layout({ children, activeTab }) {
+export default function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,8 +22,6 @@ export default function Layout({ children, activeTab }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://andrijichouse.com/hr" />
-        <link rel="canonical" href="https://andrijichouse.com/hr/rooms" />
-        <link rel="canonical" href="https://andrijichouse.com/hr/exterior" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
@@ -31,7 +29,6 @@ export default function Layout({ children, activeTab }) {
           <ToggleBars
             isOpen={isOpen}
             setIsOpen={setIsOpen}
-            activeTab={activeTab}
           />
         </header>
         <div className={styles.mainContent}>{children}</div>

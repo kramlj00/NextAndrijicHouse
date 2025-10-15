@@ -15,7 +15,7 @@
   h1 {
     color: $color-light90;
     font-family: $font-family-main;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   @media screen and (max-width: $tablet) {
@@ -47,7 +47,6 @@
 .sectionName {
   font-family: $font-family-main;
   font-size: $font-size-medium;
-  font-weight: bold;
   color: #1277b0;
   width: fit-content;
   margin: 0 auto;

@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import FsLightbox from 'fslightbox-react';
 
-const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
+const ImageGallery = ({ title, subTitle, sectionName, imagesList, id }) => {
   const [lightboxController, setLightboxController] = useState({
     toggler: false,
     slide: 1,
@@ -27,6 +27,7 @@ const ImageGallery = ({ title, subTitle, sectionName, imagesList }) => {
     <section
       data-aos="fade-up"
       data-aos-duration="1000"
+      id={id}
       className={styles.imageGalleryContainer}>
       <SectionTitle
         title={title}

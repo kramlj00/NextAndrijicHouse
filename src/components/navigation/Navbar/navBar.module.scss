@@ -27,14 +27,29 @@
     border-left: 0;
     border-right: 0;
   }
+
+  &.menuOpen {
+    border-color: transparent;
+  }
+
+  @media screen and (max-width: $tablet) {
+    top: 8px;
+    width: calc(100% - 16px);
+    height: 60px;
+  }
+}
+
+.logoContainer {
+  z-index: 20;
 }
 
 .menuList {
   display: flex;
   align-items: center;
   gap: 24px;
+  list-style: none;
 
-  @media screen and (max-width: $large) {
+  @media screen and (max-width: $xlarge) {
     display: none;
   }
 }
@@ -42,7 +57,7 @@
 .hamburgerBar {
   display: none;
 
-  @media screen and (max-width: $large) {
+  @media screen and (max-width: $xlarge) {
     display: flex;
     z-index: 1;
     height: 24px;
@@ -61,6 +76,7 @@
     width: 32px;
     height: 2px;
     background-color: white;
+    border-radius: 100px;
 
     &.scrolled {
       background-color: black;
@@ -90,11 +106,13 @@
   .menuIconLineFirstX {
     transform: rotate(45deg) translate(10px, 5px);
     transition: all 0.7s ease-out;
+    background-color: white !important;
   }
 
   .menuIconLineSecondX {
     transform: rotate(-45deg) translate(11px, -5px);
     transition: all 0.7s ease-out;
+    background-color: white !important;
   }
 
   .menuIconLineFirstXClose {
@@ -108,8 +126,28 @@
   }
 }
 
-.languageOptionsContainer {
-  @media screen and (max-width: $large) {
+.navbarActionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @media screen and (max-width: $medium) {
     display: none;
   }
+}
+
+.mobileNavMenu {
+  display: none;
+
+  @media screen and (max-width: $large) {
+    display: flex;
+    align-items: center;
+    z-index: 20;
+  }
+}
+
+.navbarActions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }

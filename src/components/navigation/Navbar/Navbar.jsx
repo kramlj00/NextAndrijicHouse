@@ -7,87 +7,146 @@ import LanguageOptions from '@components/LanguageOptions';
 import { useRouter } from 'next/router';
 import en from '@locales/en';
 import hr from '@locales/hr';
+import { usePathname } from 'next/navigation';
 
-const Navbar = ({ activeTab, toggle, isOpen }) => {
+const Navbar = ({ toggle, isOpen, active, setActive }) => {
+  const pathname = usePathname();
   const router = useRouter();
   const { locale } = router;
   const t = locale === 'en' ? en : hr;
+
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const MENU_LIST = [
+    { text: `${t.amenitiesSectionName}`, id: t.amenitiesHref },
+    { text: `${t.exterior}`, id: t.exteriorHref },
+    { text: `${t.interior}`, id: t.interiorHref },
+    { text: `${t.testimonials}`, id: t.testimonialsHref },
+    { text: `${t.contact}`, id: t.contactHref },
+  ];
+
   useEffect(() => {
+    setActive(window.location.hash.slice(1) || '');
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const viewportHeight = window.innerHeight;
       setIsScrolled(scrollTop >= viewportHeight);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const intersectingSection = entries.find(
+          (entry) => entry.isIntersecting,
+        );
+        if (intersectingSection) {
+          const id = intersectingSection.target.id;
+          setActive(id);
+          window.history.replaceState(null, '', `#${id}`);
+        } else {
+          setActive('');
+          window.history.replaceState(null, '', locale === 'en' ? '/' : '/hr');
+        }
+      },
+      {
+        rootMargin: '-50% 0px -50% 0px',
+      },
+    );
 
-  const MENU_LIST = [
-    { text: `${t.rooms}`, href: '/rooms' },
-    { text: `${t.exterior}`, href: '/exterior' },
-  ];
+    MENU_LIST.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [locale]);
+
+  const handleNavLinkClick = (id) => {
+    setActive(id);
+    if (pathname !== '/') {
+      window.location.href = `/#${id}`;
+    }
+  };
 
   return (
     <header
-      className={`${styles.navHeader} ${isScrolled ? styles.scrolled : ''}`}>
-      <Link href={'/'}>
+      className={`${styles.navHeader} ${isScrolled ? styles.scrolled : ''} ${
+        isOpen ? styles.menuOpen : ''
+      }`}>
+      <Link href={'/'} className={styles.logoContainer}>
         <Logo />
       </Link>
-      <button
-        type="button"
-        className={`${styles.hamburgerBar} ${
-          isOpen && styles.openHamburgerBar
-        }`}
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          toggle();
-        }}>
-        <div
-          className={`${styles.menuIconLine} ${
-            isScrolled ? styles.scrolled : ''
-          } ${
-            isOpen ? styles.menuIconLineFirstX : styles.menuIconLineFirstXClose
-          }`}></div>
-        <div
-          className={`${styles.menuIconLine} ${
-            isScrolled ? styles.scrolled : ''
-          } ${
-            isOpen ? styles.menuIconLineSecondHidden : styles.menuIconLineSecond
-          }`}></div>
-        <div
-          className={`${styles.menuIconLine} ${
-            isScrolled ? styles.scrolled : ''
-          } ${
-            isOpen ? styles.menuIconLineThirdHidden : styles.menuIconLineThird
-          }`}></div>
-        <div
-          className={`${styles.menuIconLine} ${
-            isScrolled ? styles.scrolled : ''
-          } ${
-            isOpen
-              ? styles.menuIconLineSecondX
-              : styles.menuIconLineSecondXClose
-          }`}></div>
-      </button>
-      <div className={styles.menuList}>
+
+      <ul className={styles.menuList}>
         {MENU_LIST.map((menu) => (
-          <div key={menu.text}>
-            <NavItem activeTab={activeTab} isScrolled={isScrolled} {...menu} />
-          </div>
+          <li key={menu.text} onClick={() => handleNavLinkClick(menu.id)}>
+            <NavItem
+              isActive={active === menu.id}
+              isScrolled={isScrolled}
+              {...menu}
+            />
+          </li>
         ))}
-        <a
-          href="https://www.booking.com/hotel/hr/apartment-zaglav-12208a.hr.html?aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGWIAQGYARC4ARfIAQzYAQPoAQGIAgGoAgO4ApzdhZYGwAIB0gIkYjkwMjdjZjMtN2QwNC00M2YzLWIxYzctYTJiM2IxNTg3ZWY52AIE4AIB&sid=9ea2f99d2546ae5288cab2ad92918067&atlas_src=sr_iw_btn;dest_id=2017;dest_type=region;dist=0;group_adults=2;group_children=0;no_rooms=1;room1=A%2CA;sb_price_type=total;type=total;ucfs=1&#availability_target"
-          target="_blank"
-          rel="noreferrer">
-          <button className="bookNowBtn">{t.bookNow}</button>
-        </a>
-      </div>
-      <div className={styles.languageOptionsContainer}>
-        <LanguageOptions />
+      </ul>
+
+      <div className={styles.navbarActions}>
+        <div className={styles.navbarActionsContainer}>
+          <LanguageOptions isScrolled={isScrolled} />
+          <a
+            href="https://www.booking.com/hotel/hr/apartment-zaglav-12208a.hr.html?aid=304142&label=gen173nr-1DCAEoggI46AdIM1gEaGWIAQGYARC4ARfIAQzYAQPoAQGIAgGoAgO4ApzdhZYGwAIB0gIkYjkwMjdjZjMtN2QwNC00M2YzLWIxYzctYTJiM2IxNTg3ZWY52AIE4AIB&sid=9ea2f99d2546ae5288cab2ad92918067&atlas_src=sr_iw_btn;dest_id=2017;dest_type=region;dist=0;group_adults=2;group_children=0;no_rooms=1;room1=A%2CA;sb_price_type=total;type=total;ucfs=1&#availability_target"
+            target="_blank"
+            rel="noreferrer">
+            <button className="bookNowBtn">{t.bookNow}</button>
+          </a>
+        </div>
+
+        <button
+          type="button"
+          className={`${styles.hamburgerBar} ${
+            isOpen && styles.openHamburgerBar
+          }`}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggle();
+          }}>
+          <div
+            className={`${styles.menuIconLine} ${
+              isScrolled ? styles.scrolled : ''
+            } ${
+              isOpen
+                ? styles.menuIconLineFirstX
+                : styles.menuIconLineFirstXClose
+            }`}></div>
+          <div
+            className={`${styles.menuIconLine} ${
+              isScrolled ? styles.scrolled : ''
+            } ${
+              isOpen
+                ? styles.menuIconLineSecondHidden
+                : styles.menuIconLineSecond
+            }`}></div>
+          <div
+            className={`${styles.menuIconLine} ${
+              isScrolled ? styles.scrolled : ''
+            } ${
+              isOpen ? styles.menuIconLineThirdHidden : styles.menuIconLineThird
+            }`}></div>
+          <div
+            className={`${styles.menuIconLine} ${
+              isScrolled ? styles.scrolled : ''
+            } ${
+              isOpen
+                ? styles.menuIconLineSecondX
+                : styles.menuIconLineSecondXClose
+            }`}></div>
+        </button>
       </div>
     </header>
   );

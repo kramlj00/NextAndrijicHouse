@@ -43,7 +43,13 @@
     color: $color-white;
     z-index: 2;
     align-items: center;
-    gap: 24px;
+    gap: 40px;
+    width: 100%;
+    padding: 0 24px;
+
+    @media screen and (max-width: $tablet) {
+      gap: 24px;
+    }
   }
 
   .saying {
@@ -51,7 +57,9 @@
     text-transform: uppercase;
     font-size: $font-size-title;
     font-family: $font-family-main;
-    width: 550px;
+    font-weight: 500;
+    max-width: 550px;
+    width: 100%;
     line-height: 84px;
 
     @media screen and (max-width: $desktop) {
@@ -76,6 +84,7 @@
     background-clip: text;
     font-weight: 700;
     animation: gradientShift 3s ease-in-out infinite;
+    width: 100%;
 
     @media screen and (max-width: $tablet) {
       font-size: $font-size-subtitle-large;
@@ -101,18 +110,19 @@
     font-size: $font-size-medium-large;
     font-family: $font-family-main;
     color: $color-white;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     line-height: 32px;
+    font-weight: 500;
 
     @media screen and (max-width: $tablet) {
       font-size: $font-size-medium-larger;
       line-height: 24px;
-      width: 500px;
+      width: 100%;
     }
     @media screen and (max-width: $mobile) {
       font-size: $font-size-medium;
-      line-height: 20px;
-      width: 350px;
+      width: 100%;
     }
   }
 
@@ -124,6 +134,7 @@
     color: $color-white;
     font-size: $font-size-medium;
     font-family: $font-family-main;
+    font-weight: 600;
     z-index: 2;
 
     @media screen and (max-width: $tablet) {

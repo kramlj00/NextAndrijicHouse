@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from '@components/navigation/Sidebar';
 import Navbar from '@components/navigation/Navbar';
 
-const ToggleBars = ({ activeTab, isOpen, setIsOpen }) => {
+const ToggleBars = ({ isOpen, setIsOpen }) => {
+  const [active, setActive] = useState('');
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div>
-      <Sidebar activeTab={activeTab} isOpen={isOpen} />
-      <Navbar activeTab={activeTab} toggle={toggle} isOpen={isOpen} />
-    </div>
+    <>
+      <Sidebar
+        active={active}
+        setActive={setActive}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
+      <Navbar
+        toggle={toggle}
+        isOpen={isOpen}
+        active={active}
+        setActive={setActive}
+      />
+    </>
   );
 };
 

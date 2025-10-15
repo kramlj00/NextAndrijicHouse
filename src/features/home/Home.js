@@ -1,8 +1,9 @@
 import MainImage from '@components/MainImage';
-import HomeCard from '@features/home/HomeCard';
 import Amenities from './Amenities';
 import ExteriorImagesGallery from './ExteriorImagesGallery';
 import InteriorImagesGallery from './InteriorImagesGallery';
+import Testimonials from '../../components/Testimonials';
+import Location from '../../components/Location';
 
 const Home = () => {
   return (
@@ -14,7 +15,8 @@ const Home = () => {
       <Amenities />
       <ExteriorImagesGallery />
       <InteriorImagesGallery />
-      <HomeCard />
+      <Testimonials />
+      <Location />
     </>
   );
 };
