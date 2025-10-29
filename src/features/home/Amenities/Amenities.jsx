@@ -39,7 +39,6 @@ const Amenities = () => {
     { key: 'terrace', icon: HouseIcon },
     { key: 'barbecue', icon: Flame },
     { key: 'canoe', icon: ShipIcon },
-    { key: 'boat', icon: Anchor },
     { key: 'sunbeds', icon: RockingChairIcon },
     { key: 'umbrella', icon: UmbrellaIcon },
     { key: 'shower', icon: ShowerHeadIcon },

@@ -1,6 +1,7 @@
 const en = {
-  homeWelcomeTitle: "Welcome to",
-  homeWelcomeText: 'Experience unparalleled luxury on the Croatian coast. Your private sanctuary awaits with breathtaking sea views and world-class hospitality.',
+  homeWelcomeTitle: 'Welcome to',
+  homeWelcomeText:
+    'Experience unparalleled luxury on the Croatian coast. Your private sanctuary awaits with breathtaking sea views and world-class hospitality.',
   rating: 'Rating',
   privateBeachAccess: 'Private Beach Access',
   welcomeTitle: 'Welcome!',
@@ -26,14 +27,17 @@ const en = {
   testimonialsSubtitle: 'What our guests say about us',
   testimonialsSectionName: 'Testimonials',
   exteriorImageGalleryTitle: 'Exterior & Surroundings',
-  exteriorImageGallerySubtitle: 'Discover the stunning architecture and natural beauty that surrounds Andrijić House. From the pristine coastline to the lush Mediterranean gardens.',
+  exteriorImageGallerySubtitle:
+    'Discover the stunning nature around the house and beautiful coastal views.',
   exteriorImageGallerySectionName: 'Exterior & Surroundings',
   interiorImageGalleryTitle: 'Interior',
-  interiorImageGallerySubtitle: 'Discover the stunning interior of Andrijić House. From the fully equipped kitchen to the comfortable bedrooms, every corner is crafted for your comfort and enjoyment.',
+  interiorImageGallerySubtitle:
+    'Discover the stunning interior of Andrijić House. From the fully equipped kitchen to the comfortable bedrooms, every corner is crafted for your comfort and enjoyment.',
   interiorImageGallerySectionName: 'Interior',
   amenitiesTitle: 'Luxury Amenities & Features',
   amenitiesSectionName: 'Amenities',
-  amenitiesSubtitle: 'Every detail has been carefully curated to ensure your stay exceeds expectations. From private beach access to premium amenities, experience coastal luxury at its finest.',
+  amenitiesSubtitle:
+    'Every detail has been carefully curated to ensure your stay exceeds expectations. From private beach access to premium amenities, experience coastal luxury at its finest.',
   amenities: {
     wifi: 'Free WiFi',
     parking: 'Private Parking',
@@ -42,7 +46,6 @@ const en = {
     terrace: 'Covered Terrace',
     barbecue: 'Private Barbecue',
     canoe: 'Canoe',
-    boat: 'Boat',
     sunbeds: 'Sunbeds',
     umbrella: 'Parasol',
     shower: 'Outdoor Shower',
@@ -50,7 +53,7 @@ const en = {
     tv: 'TV',
     airConditioning: 'Air Conditioning',
     bathroom: 'Equipped Bathroom',
-    welcomeGift: 'Welcome Gift'
+    welcomeGift: 'Welcome Gift',
   },
   amenitiesDescriptions: {
     wifi: 'Complimentary high-speed internet throughout the property',
@@ -60,7 +63,6 @@ const en = {
     terrace: 'Large covered outdoor space perfect for dining and relaxation',
     barbecue: 'Private outdoor grill for delicious meals with sea views',
     canoe: 'Complimentary canoe for exploring the beautiful coastline',
-    boat: 'Private boat available for fishing and coastal adventures',
     sunbeds: 'Comfortable sunbeds for relaxing by the sea',
     umbrella: 'Large parasol providing shade on sunny days',
     shower: 'Convenient outdoor shower for after beach activities',
@@ -68,30 +70,34 @@ const en = {
     tv: 'Television for entertainment and relaxation',
     airConditioning: 'Air conditioning for comfortable temperature control',
     bathroom: 'Fully equipped bathroom with towels and hair dryer',
-    welcomeGift: 'Welcome gift of homemade olive oil and wine'
+    welcomeGift: 'Welcome gift of homemade olive oil and wine',
   },
   reviews: {
     sandi: {
-      country: "Slovenia",
-      comment: "The house is perfect for a private getaway, extremely nice, clean with perfect small private beach! The owners are very nice. The best accomodation I've experienced in Croatia so far!"
+      country: 'Slovenia',
+      comment:
+        "The house is perfect for a private getaway, extremely nice, clean with perfect small private beach! The owners are very nice. The best accomodation I've experienced in Croatia so far!",
     },
     raneiro: {
-      country: "Croatia",
-      comment: "Great location, friendly host. Apartment with direct access to the sea! I recommend."
+      country: 'Croatia',
+      comment:
+        'Great location, friendly host. Apartment with direct access to the sea! I recommend.',
     },
     willj: {
-      country: "Italy",
-      comment: "Beautiful location and extremely friendly and helpful hosts. We will definitely be back. The only thing was the sirocco wind, but surely in another period it would have been a perfect paradise!"
+      country: 'Italy',
+      comment:
+        'Beautiful location and extremely friendly and helpful hosts. We will definitely be back. The only thing was the sirocco wind, but surely in another period it would have been a perfect paradise!',
     },
     robert: {
-      country: "Germany",
-      comment: "A place to relax in an absolutely peaceful location! Beautiful view of the sea! Top-equipped and clean apartment! Very nice hosts! Everything you need for a perfect holiday!"
-    }
+      country: 'Germany',
+      comment:
+        'A place to relax in an absolutely peaceful location! Beautiful view of the sea! Top-equipped and clean apartment! Very nice hosts! Everything you need for a perfect holiday!',
+    },
     // markus: {
     //   country: "Austria",
     //   comment: "The hosts, Tonči and Ivana, a very kind young couple, were waiting for us when we arrived and welcomed us warmly. The apartment is located in a very quiet, but excellent environment for a relaxing holiday. The view from the terrace of the apartment and the concrete terrace for swimming is beautiful. The terrace for swimming has a large umbrella and sunbeds, a ladder for a comfortable entry into the sea and even a canoe. The apartment is modernly decorated, with an outdoor grill, another outdoor refrigerator, a large covered terrace, everything is really perfect. We even received a bottle of very good wine and olive oil as a gift, both homemade. It couldn't be more perfect, really great. It's a pity that we booked only 5 days."
     // }
-  }
+  },
 };
 
 export default en;
