@@ -23,18 +23,26 @@ export default function MainImage({ src, name }) {
         unoptimized={true}
       />
       <div className={styles.imageMask}></div>
+
       <section className={styles.sayingWrapper}>
-        <h1 className={styles.saying}>
-          {t.homeWelcomeTitle}{' '}
-          <p className={styles.sayingSpan}>Andrijić House</p>
-        </h1>
-        <p className={styles.sayingText}>{t.homeWelcomeText}</p>
-        <div className={styles.propertyDetails}>
-          <span className={styles.detailItem}>📍 Zaglav, Korčula, Croatia</span>
-          <span className={styles.detailSeparator}>•</span>
-          <span className={styles.detailItem}>⭐ 5/5 {t.rating}</span>
-          <span className={styles.detailSeparator}>•</span>
-          <span className={styles.detailItem}>🏖️ {t.privateBeachAccess}</span>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          data-aos-easing="ease-in-out">
+          <h1 className={styles.saying}>
+            {t.homeWelcomeTitle}{' '}
+            <p className={styles.sayingSpan}>Andrijić House</p>
+          </h1>
+          <p className={styles.sayingText}>{t.homeWelcomeText}</p>
+          <div className={styles.propertyDetails}>
+            <span className={styles.detailItem}>
+              📍 Zaglav, Korčula, Croatia
+            </span>
+            <span className={styles.detailSeparator}>•</span>
+            <span className={styles.detailItem}>⭐ 5/5 {t.rating}</span>
+            <span className={styles.detailSeparator}>•</span>
+            <span className={styles.detailItem}>🏖️ {t.privateBeachAccess}</span>
+          </div>
         </div>
       </section>
 
