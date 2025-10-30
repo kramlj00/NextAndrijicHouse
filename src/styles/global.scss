@@ -7,6 +7,7 @@
   padding: 0;
   outline: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   overflow-x: hidden;
@@ -60,21 +61,18 @@ textarea:focus {
 .bookNowBtn {
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 5px;
+  border-radius: 100px;
   cursor: pointer;
   padding: $spacing-small $spacing-large;
   background-color: $color-gold;
   color: $color-white;
   font-size: $font-size-medium;
   border: 1px solid $color-gold;
-
-  @media screen and (max-width: $mobile) {
-    padding: $spacing-small $spacing-medium;
-  }
+  font-weight: bolder;
 
   &:hover {
     background-color: #dbae6b;
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: all 0.4s ease-out;
   }
 }

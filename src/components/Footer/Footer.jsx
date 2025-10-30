@@ -12,8 +12,10 @@ const Footer = () => {
   const t = locale === 'en' ? en : hr;
 
   const footerItems = [
-    { label: `${t.rooms}`, path: '/rooms' },
-    { label: `${t.exterior}`, path: '/exterior' },
+    { label: `${t.amenitiesSectionName}`, path: t.amenitiesHref },
+    { label: `${t.exterior}`, path: t.exteriorHref },
+    { label: `${t.interior}`, path: t.interiorHref },
+    { label: `${t.testimonials}`, path: t.testimonialsHref },
   ];
 
   return (
@@ -25,8 +27,8 @@ const Footer = () => {
           style={{ display: 'flex', height: '100%' }}>
           <defs>
             <linearGradient id="gradient" gradientTransform="rotate(90)">
-              <stop offset="0" stopColor="white" />
-              <stop offset="0.75" stopColor="black" />
+              <stop offset="0.25" stopColor="white" />
+              <stop offset="1" stopColor="black" />
             </linearGradient>
             <mask id="mask">
               <rect
@@ -49,9 +51,7 @@ const Footer = () => {
       </section>
       <section className={styles.footerItemsContainer}>
         <div className={styles.itemContainer}>
-          <Link href={'/contact'} legacyBehavior>
-            <div className={styles.footerItemTitle}>{t.contactUs}</div>
-          </Link>
+          <div className={styles.footerItemTitle}>{t.contactUs}</div>
           <a
             href="mailto:tonci.andrijic@gmail.com"
             className={styles.footerItemSubtitle}>
@@ -69,8 +69,8 @@ const Footer = () => {
           </a>
         </div>
         {footerItems.map((footerItem) => (
-          <div className={styles.itemContainer} key={footerItem.path}>
-            <Link href={footerItem.path} legacyBehavior>
+          <div className={styles.navItemContainer} key={footerItem.path}>
+            <Link href={`#${footerItem.path}`}>
               <div className={styles.footerItemTitle}>{footerItem.label}</div>
             </Link>
           </div>
@@ -87,7 +87,9 @@ const Footer = () => {
         <span className={styles.createdBy}>
           Created by{' '}
           <a
-            href="mailto:kristinaramljak5@gmail.com"
+            href="https://portfolio-two-nu-83.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
             className={styles.createdByName}>
             Kristina Ramljak
           </a>

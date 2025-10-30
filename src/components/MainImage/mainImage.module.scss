@@ -14,59 +14,155 @@
 }
 
 .imageContainer {
-  height: 89vh;
+  height: 100vh;
   position: relative;
 
-  @media screen and (max-width: $desktop) {
-    height: 87vh;
-  }
-  @media screen and (max-width: $large) {
-    height: 85vh;
+  .imageMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 
   > .sayingWrapper {
     visibility: visible;
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-flow: column;
-    background: transparent;
     position: absolute;
-    top: 70%;
-    left: 79%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-    color: $color-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    padding: 0 24px;
 
-    @media screen and (max-width: $desktop) {
-      left: 50%;
-      top: 50%;
+    > div {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      gap: 40px;
+      text-align: center;
+      color: $color-white;
+
+      @media screen and (max-width: $tablet) {
+        gap: 24px;
+      }
     }
   }
 
   .saying {
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
-    font-family: $font-family-secondary;
     font-size: $font-size-title;
-    width: 550px;
+    font-family: $font-family-main;
+    font-weight: 500;
+    max-width: 550px;
+    width: 100%;
+    line-height: 84px;
 
     @media screen and (max-width: $desktop) {
       font-size: $font-size-subtitle-large;
     }
     @media screen and (max-width: $tablet) {
       font-size: $font-size-subtitle;
-      width: 400px;
+      line-height: 64px;
     }
     @media screen and (max-width: $mobile) {
       font-size: $font-size-extra-large;
-      width: '100%';
+    }
+  }
+
+  .sayingSpan {
+    font-family: $font-family-secondary;
+    font-size: $font-size-title;
+    background: linear-gradient(135deg, $color-gold, #ffffff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    animation: gradientShift 3s ease-in-out infinite;
+    width: 100%;
+
+    @media screen and (max-width: $tablet) {
+      font-size: $font-size-subtitle-large;
+    }
+    @media screen and (max-width: $mobile) {
+      font-size: $font-size-extra-large;
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .sayingText {
+    font-size: $font-size-medium-large;
+    font-family: $font-family-main;
+    color: $color-white;
+    max-width: 600px;
+    width: 100%;
+    line-height: 32px;
+    font-weight: 500;
+
+    @media screen and (max-width: $tablet) {
+      font-size: $font-size-medium-larger;
+      line-height: 24px;
+      width: 100%;
+    }
+    @media screen and (max-width: $mobile) {
+      font-size: $font-size-medium;
+      width: 100%;
+    }
+  }
+
+  .propertyDetails {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $color-white;
+    font-size: $font-size-medium;
+    font-family: $font-family-main;
+    font-weight: 600;
+    z-index: 2;
+
+    @media screen and (max-width: $tablet) {
+      font-size: $font-size-medium-small;
+      gap: 8px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  .detailItem {
+    white-space: nowrap;
+  }
+
+  .detailSeparator {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+
+    @media screen and (max-width: $mobile) {
+      display: none;
     }
   }
 }
 
 .bookNowContainer {
   .bookNowHomeBtn {
+    z-index: 2;
     position: absolute;
     top: 93%;
     left: 50%;
