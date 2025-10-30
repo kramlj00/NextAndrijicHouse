@@ -53,6 +53,7 @@ const en = {
     tv: 'TV',
     airConditioning: 'Air Conditioning',
     bathroom: 'Equipped Bathroom',
+    pets: 'Pets Allowed',
     welcomeGift: 'Welcome Gift',
   },
   amenitiesDescriptions: {
@@ -70,6 +71,7 @@ const en = {
     tv: 'Television for entertainment and relaxation',
     airConditioning: 'Air conditioning for comfortable temperature control',
     bathroom: 'Fully equipped bathroom with towels and hair dryer',
+    pets: 'Well-behaved pets are welcome to join your stay',
     welcomeGift: 'Welcome gift of homemade olive oil and wine',
   },
   reviews: {

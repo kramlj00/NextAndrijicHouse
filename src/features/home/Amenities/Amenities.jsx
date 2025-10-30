@@ -21,6 +21,7 @@ import {
   UmbrellaIcon,
   WavesIcon,
   WifiIcon,
+  PawPrintIcon,
 } from 'lucide-react';
 import SectionTitle from '../../../components/SectionTitle';
 
@@ -46,6 +47,7 @@ const Amenities = () => {
     { key: 'tv', icon: TvIcon },
     { key: 'airConditioning', icon: SnowflakeIcon },
     { key: 'bathroom', icon: BathIcon },
+    { key: 'pets', icon: PawPrintIcon },
     { key: 'welcomeGift', icon: GiftIcon },
   ];
 

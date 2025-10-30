@@ -54,6 +54,7 @@ const hr = {
     tv: 'TV',
     airConditioning: 'Klima',
     bathroom: 'Opremljena Kupaonica',
+    pets: 'Ljubimci Dozvoljeni',
     welcomeGift: 'Poklon za Goste',
   },
   amenitiesDescriptions: {
@@ -71,6 +72,7 @@ const hr = {
     tv: 'Televizor za zabavu i opuštanje',
     airConditioning: 'Klima za ugodnu kontrolu temperature',
     bathroom: 'Potpuno opremljena kupaonica s ručnicima i fenom',
+    pets: 'Dobro odgojeni ljubimci su dobrodošli',
     welcomeGift: 'Poklon za goste - domaće maslinovo ulje i vino',
   },
   reviews: {
