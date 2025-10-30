@@ -1,7 +1,7 @@
 const hr = {
   homeWelcomeTitle: 'Dobro došli u',
   homeWelcomeText:
-    'Doživite nenadmašan luksuz na hrvatskoj obali. Vaše privatno utočište čeka vas s prekrasnim pogledom na more i uslugom svjetske klase.',
+    'Doživite neusporediv luksuz na hrvatskoj obali. Vaše privatno utočište čeka vas s prekrasnim pogledom na more i uslugom svjetske klase.',
   rating: 'Ocjena',
   privateBeachAccess: 'Privatni Pristup Plaži',
   welcomeTitle: 'Dobro došli!',
@@ -19,7 +19,8 @@ const hr = {
   contact: 'Kontakt',
   reviewsTitle: 'Nekoliko riječi od naših gostiju',
   testimonialsTitle: 'Recenzije',
-  testimonialsSubtitle: 'Što naši gosti kažu o nama',
+  testimonialsSubtitle:
+    'Naši gosti često ističu toplu dobrodošlicu, udobnost i predivan pogled na more. Pročitajte njihova iskustva i otkrijte zašto se mnogi rado vraćaju upravo nama.',
   testimonialsSectionName: 'Recenzije',
   bookNow: 'Rezerviraj',
   locationTitle: 'Lokacija',
@@ -29,7 +30,7 @@ const hr = {
   address: 'Zaglav, 20271 Blato, Hrvatska',
   exteriorImageGalleryTitle: 'Eksterijer & Okoliš',
   exteriorImageGallerySubtitle:
-    'Otkrijte zadivljujuću prirodu oko kuće i prekrasan pogled na more.',
+    'Otkrijte zadivljujuću prirodu oko kuće i nezaboravan pogled na more.',
   exteriorImageGallerySectionName: 'Eksterijer & Okoliš',
   interiorImageGalleryTitle: 'Interijer',
   interiorImageGallerySubtitle:

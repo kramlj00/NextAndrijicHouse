@@ -24,7 +24,8 @@ const en = {
   address: 'Zaglav, 20271 Blato, Croatia',
   reviewsTitle: 'Few words from our guests',
   testimonialsTitle: 'Testimonials',
-  testimonialsSubtitle: 'What our guests say about us',
+  testimonialsSubtitle:
+    'Our guests often highlight the warm welcome, comfort, and stunning sea view. Read their experiences and discover why so many love to return.',
   testimonialsSectionName: 'Testimonials',
   exteriorImageGalleryTitle: 'Exterior & Surroundings',
   exteriorImageGallerySubtitle:
