@@ -38,19 +38,19 @@ const ImageGallery = ({ title, subTitle, sectionName, imagesList, id }) => {
 
       <div className={styles.imageGrid}>
         {currentImages && currentImages.length > 0 ? (
-          currentImages.map((image, index) => (
+          currentImages.map((image) => (
             <button
-              key={startIndex + index}
+              key={image.id}
               onClick={() =>
                 setLightboxController({
                   toggler: !lightboxController.toggler,
-                  slide: index + 1,
+                  slide: image.id,
                 })
               }
               className={styles.imageButton}>
               <Image
                 src={image.src}
-                alt={image.alt || `Image ${startIndex + index + 1}`}
+                alt={image.alt || `Image ${image.id}`}
                 className={styles.imageThumbnail}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
