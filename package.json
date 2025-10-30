@@ -30,7 +30,7 @@
     "sass": "^1.54.3"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=22.0.0 <24.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
