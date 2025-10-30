@@ -58,15 +58,22 @@
   transform: scale(1.1);
 }
 
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
 .imageOverlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0);
   transition: background-color 0.3s ease;
-}
-
-.imageButton:hover .imageOverlay {
   background-color: rgba(0, 0, 0, 0.2);
+  animation: pulse 2s ease-in-out infinite;
 }
 
 .pagination {

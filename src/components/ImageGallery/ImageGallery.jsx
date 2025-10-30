@@ -49,7 +49,7 @@ const ImageGallery = ({ title, subTitle, sectionName, imagesList, id }) => {
               }
               className={styles.imageButton}>
               <Image
-                src={image.src || '/placeholder.svg'}
+                src={image.src}
                 alt={image.alt || `Image ${startIndex + index + 1}`}
                 className={styles.imageThumbnail}
                 fill
